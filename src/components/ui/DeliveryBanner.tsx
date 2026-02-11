@@ -16,12 +16,12 @@ export function DeliveryBanner() {
     { icon: Star, text: "Premium Packaging", sub: "Temperature controlled" }
   ];
 
-  useEffect(() => {
+useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [features.length]); // Added features.length here
 
   if (!isVisible) return null;
 
