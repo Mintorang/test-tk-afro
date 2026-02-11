@@ -1,0 +1,12 @@
+{
+  "placeholder": "Replace with actual Stripe domain verification file",
+  "instructions": "Get the real file from Stripe Dashboard → Settings → Payment methods → Apple Pay",
+  "domain": "tkafrokitchen.com",
+  "status": "pending_verification",
+  "steps": [
+    "Go to https://dashboard.stripe.com",
+    "Navigate to Settings → Payment methods → Apple Pay",
+    "Download the domain verification file",
+    "Replace this entire file content with the downloaded content"
+  ]
+} 

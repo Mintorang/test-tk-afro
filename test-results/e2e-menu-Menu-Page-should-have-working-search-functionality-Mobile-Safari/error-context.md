@@ -1,0 +1,157 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Milton Keynes, UK
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - navigation:
+    - link "About":
+      - /url: /about
+    - link "FAQ":
+      - /url: /faqs
+    - link "Contact":
+      - /url: /contact
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - navigation:
+    - link "Menu":
+      - /url: /menu
+    - link "Pricing":
+      - /url: /pricing
+    - link "Frozen":
+      - /url: /frozen
+    - link "Catering":
+      - /url: /catering
+  - button
+  - link "Order Now":
+    - /url: /menu
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Experience authentic West African cuisine delivered to your doorstep across the UK
+- text: Delivery £21.99 Next Day Delivery
+- link "Order Now":
+  - /url: /menu
+- button
+- main:
+  - heading "Our Menu" [level=1]
+  - paragraph: Discover the rich flavors of Nigeria and West Africa, each dish tells a story of tradition and heritage
+  - textbox "Search for dishes...": jollof
+  - text: 🔍
+  - button "🍽️ All Dishes"
+  - button "Rice Dishes"
+  - button "Soups & Stews"
+  - button "Protein Dishes"
+  - button "Side Dishes"
+  - button "Snacks & Pastries"
+  - button "Fish Platters"
+  - img "Jollof Rice"
+  - heading "Jollof Rice" [level=3]
+  - paragraph: Our signature Jollof rice cooked with rich tomato sauce and aromatic spices
+  - text: From £35.00 3 size options
+  - heading "Portion Sizes & Pricing" [level=2]
+  - paragraph: Choose the perfect portion size for your needs. All our dishes are available in three convenient sizes.
+  - heading "Small Portion" [level=3]
+  - text: £8.99
+  - paragraph: Perfect for one person or as a side dish
+  - list:
+    - listitem: Single serving
+    - listitem: Great for lunch
+    - listitem: Quick meal option
+  - button "Order Now"
+  - heading "Medium Portion" [level=3]
+  - text: £12.99
+  - paragraph: Ideal for two people or a hearty meal
+  - list:
+    - listitem: Feeds 2 people
+    - listitem: Most popular choice
+    - listitem: Great value
+  - button "Order Now"
+  - heading "Large Portion" [level=3]
+  - text: £16.99
+  - paragraph: Perfect for families or sharing
+  - list:
+    - listitem: Feeds 3-4 people
+    - listitem: Family size
+    - listitem: Best value for groups
+  - button "Order Now"
+  - heading "Complete Price List & Value Calculator" [level=2]
+  - paragraph: Explore our comprehensive pricing with interactive value calculator, portion guides, and best value recommendations.
+  - button "View Complete Price List"
+  - button "Order Now"
+  - heading "Ready to Order?" [level=3]
+  - paragraph: Experience the authentic flavors of Nigeria delivered to your doorstep
+  - button "Browse Menu"
+  - button "Contact Us"
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+  - button
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- alert
+```

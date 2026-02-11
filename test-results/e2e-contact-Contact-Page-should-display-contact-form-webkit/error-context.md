@@ -1,0 +1,131 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Milton Keynes, UK
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - navigation:
+    - link "About":
+      - /url: /about
+    - link "FAQ":
+      - /url: /faqs
+    - link "Contact":
+      - /url: /contact
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - navigation:
+    - link "Menu":
+      - /url: /menu
+    - link "Pricing":
+      - /url: /pricing
+    - link "Frozen":
+      - /url: /frozen
+    - link "Catering":
+      - /url: /catering
+  - button
+  - link "Order Now":
+    - /url: /menu
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Experience authentic West African cuisine delivered to your doorstep across the UK
+- text: Delivery £21.99 Any UK Postcode
+- link "Order Now":
+  - /url: /menu
+- button
+- main:
+  - heading "Let's Create Magic Together" [level=1]
+  - paragraph: From intimate family gatherings to grand celebrations, we're here to bring the authentic flavors of Nigeria to your table. Every dish tells a story of tradition, love, and culinary excellence.
+  - button "Contact Us"
+  - button "Our Story"
+  - button "Bulk Orders"
+  - button "Custom Menus"
+  - heading "Get in Touch" [level=2]
+  - heading "Email Us" [level=3]
+  - paragraph: chef@tkafrokitchen.com
+  - paragraph: We respond within 2 hours
+  - heading "Opening Hours" [level=3]
+  - paragraph: "Monday - Sunday: 9:00 AM - 10:00 PM"
+  - paragraph: Catering available 24/7
+  - heading "Location" [level=3]
+  - paragraph: Milton Keynes, UK
+  - paragraph: Delivery & Collection available
+  - heading "Send Us a Message" [level=2]
+  - paragraph: Have a question, need a quote, or want to discuss your event? We'd love to hear from you!
+  - button "Send Message to Kitchen"
+  - paragraph: Or connect with us on social media
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- alert
+```

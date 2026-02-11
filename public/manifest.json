@@ -1,0 +1,27 @@
+{
+  "name": "TK Afro Kitchen",
+  "short_name": "TK Afro Kitchen",
+  "description": "Authentic Nigerian and African cuisine - Fresh, delicious meals prepared with traditional recipes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e1e",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/brand/tklogo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/brand/tklogo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurants", "lifestyle"],
+  "lang": "en-GB",
+  "dir": "ltr"
+} 

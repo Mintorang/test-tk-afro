@@ -1,0 +1,275 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - button
+  - button
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Authentic West African cuisine delivered UK-wide
+- text: £21.99
+- link "Order":
+  - /url: /menu
+- button
+- main:
+  - img "Croaker Fish Platter"
+  - text: 1 of 5 • Premium Fish Platters
+  - heading "TK Afro Kitchen" [level=1]
+  - paragraph: Experience authentic Nigerian cuisine with premium ingredients, traditional recipes, and exceptional taste that brings the flavors of Africa to your table
+  - link "Explore Our Menu":
+    - /url: /menu
+    - button "Explore Our Menu"
+  - link "Contact Us":
+    - /url: /contact
+    - button "Contact Us"
+  - heading "Premium Quality" [level=3]
+  - paragraph: Authentic Nigerian recipes
+  - heading "Fresh Daily" [level=3]
+  - paragraph: Prepared fresh every day
+  - heading "UK-Wide Delivery" [level=3]
+  - paragraph: Fast delivery across UK
+  - button
+  - button
+  - button
+  - button
+  - button
+  - heading "Fresh Menu" [level=2]
+  - paragraph: Discover our most popular dishes, prepared with authentic Nigerian recipes and premium ingredients
+  - img "Jollof Rice"
+  - heading "Jollof Rice" [level=3]
+  - paragraph: Our signature Jollof rice cooked with rich tomato sauce and aromatic spices
+  - text: From £35.00 3 size options
+  - img "Fried Rice"
+  - heading "Fried Rice" [level=3]
+  - paragraph: Flavorful fried rice with a perfect blend of peppers and seasonings
+  - text: From £45.00 2 size options
+  - img "Peppered Beef and Chicken"
+  - text: Customizable
+  - heading "Peppered Beef and Chicken" [level=3]
+  - paragraph: Perfectly seasoned combination of beef and chicken
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Peppered Soft Chicken"
+  - text: Customizable
+  - heading "Peppered Soft Chicken" [level=3]
+  - paragraph: Tender soft chicken in rich pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £55.00 2 size options
+  - img "Egusi Soup"
+  - text: Customizable
+  - heading "Egusi Soup" [level=3]
+  - paragraph: Rich melon seed soup with assorted meat
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Efo Riro"
+  - text: Customizable
+  - heading "Efo Riro" [level=3]
+  - paragraph: Rich and nutritious Nigerian spinach stew
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - button "View Full Menu"
+  - heading "Our Story" [level=2]
+  - paragraph: From humble beginnings to serving authentic Nigerian cuisine across the community. Every dish carries the legacy of our ancestors and the love of our family.
+  - heading "The Beginning" [level=3]
+  - paragraph: Started as a small family kitchen, sharing authentic Nigerian flavors with our community.
+  - text: "2018"
+  - heading "Growing Community" [level=3]
+  - paragraph: Expanded our menu and built a loyal customer base who loved our traditional recipes.
+  - text: "2020"
+  - heading "Award Recognition" [level=3]
+  - paragraph: Received recognition for excellence in authentic Nigerian cuisine and customer service.
+  - text: "2022"
+  - heading "Digital Innovation" [level=3]
+  - paragraph: Launched our online platform to serve more customers with the same authentic taste.
+  - text: "2024"
+  - heading "Our Values" [level=3]
+  - heading "Authenticity" [level=4]
+  - paragraph: Every dish tells a story of our heritage and tradition.
+  - heading "Quality" [level=4]
+  - paragraph: Only the finest ingredients make it to your plate.
+  - heading "Community" [level=4]
+  - paragraph: Building connections through shared meals and culture.
+  - heading "Excellence" [level=4]
+  - paragraph: Consistent delivery of exceptional dining experiences.
+  - heading "Join Our Culinary Journey" [level=3]
+  - paragraph: Experience the authentic taste of Nigeria. Every meal is prepared with love, tradition, and the finest ingredients. Order now and taste the difference.
+  - link "View Our Menu":
+    - /url: /menu
+  - link "Contact Us":
+    - /url: /contact
+  - heading "Interactive Menu Experience" [level=2]
+  - paragraph: Explore our authentic Nigerian dishes with interactive 3D cards. Hover to discover ingredients, preparation details, and customer ratings.
+  - img "Jollof Rice"
+  - text: Popular 🔥 Spicy 4.8 Rice Dishes £35
+  - heading "Jollof Rice" [level=3]
+  - paragraph: Authentic Nigerian Jollof rice cooked with tomatoes, peppers, and aromatic spices.
+  - text: 25 min 4-6 people
+  - heading "Features" [level=4]
+  - text: Traditional Recipe Rich Aroma Perfect Spice Blend
+  - link "Add to Cart":
+    - /url: /menu
+  - link:
+    - /url: /menu
+  - img "Peppered Beef & Chicken"
+  - text: Popular 🔥 Spicy 4.9 Protein Dishes £60
+  - heading "Peppered Beef & Chicken" [level=3]
+  - paragraph: Succulent beef and chicken cooked in a spicy pepper sauce with onions.
+  - text: 30 min 4-6 people
+  - heading "Features" [level=4]
+  - text: Premium Cuts Spicy Sauce Tender Meat
+  - link "Add to Cart":
+    - /url: /menu
+  - link:
+    - /url: /menu
+  - img "Efo Riro"
+  - text: 🌱 Vegetarian 4.7 Soups & Stews £60
+  - heading "Efo Riro" [level=3]
+  - paragraph: Traditional spinach stew served with fried yam, fried plantain, and sauce.
+  - text: 20 min 4-6 people
+  - heading "Features" [level=4]
+  - text: Fresh Spinach Rich Broth Traditional Recipe
+  - link "Add to Cart":
+    - /url: /menu
+  - link:
+    - /url: /menu
+  - img "Egusi Soup"
+  - text: 4.6 Soups & Stews £70
+  - heading "Egusi Soup" [level=3]
+  - paragraph: Ground melon seed soup with assorted meat and vegetables.
+  - text: 35 min 4-6 people
+  - heading "Features" [level=4]
+  - text: Ground Melon Seeds Assorted Meat Rich Flavor
+  - link "Add to Cart":
+    - /url: /menu
+  - link:
+    - /url: /menu
+  - heading "Explore Our Full Menu" [level=3]
+  - paragraph: Discover more authentic Nigerian dishes, from traditional soups to modern fusion creations. Each dish is crafted with love and authentic recipes passed down through generations.
+  - link "View Complete Menu":
+    - /url: /menu
+  - heading "Virtual Experience Tour" [level=2]
+  - paragraph: Take a behind-the-scenes look at our kitchen, meet our team, and discover how we create authentic Nigerian cuisine from scratch.
+  - button
+  - text: 0:30 Step 1 of 7
+  - heading "Chef's Kitchen Mastery" [level=3]
+  - paragraph: Watch our expert chefs skillfully prepare authentic Nigerian dishes with traditional techniques and modern precision.
+  - heading "Key Features:" [level=4]
+  - text: Traditional Techniques Expert Chefs Authentic Recipes
+  - button "Previous"
+  - button "Play"
+  - button "Next"
+  - button "1 Chef's Kitchen Mastery Watch our expert chefs skillfully prepare authentic Nigerian dishes with traditional techniques and modern precision.":
+    - text: "1"
+    - heading "Chef's Kitchen Mastery" [level=4]
+    - paragraph: Watch our expert chefs skillfully prepare authentic Nigerian dishes with traditional techniques and modern precision.
+  - button "2 Kitchen Team Dynamics Experience the synchronized teamwork and passion that goes into every dish preparation in our bustling kitchen.":
+    - text: "2"
+    - heading "Kitchen Team Dynamics" [level=4]
+    - paragraph: Experience the synchronized teamwork and passion that goes into every dish preparation in our bustling kitchen.
+  - button "3 Premium Ingredient Selection Discover how we carefully select and prepare the finest ingredients that make our Nigerian cuisine truly exceptional.":
+    - text: "3"
+    - heading "Premium Ingredient Selection" [level=4]
+    - paragraph: Discover how we carefully select and prepare the finest ingredients that make our Nigerian cuisine truly exceptional.
+  - button "4 Artistic Food Presentation See how we transform each dish into a visual masterpiece, ensuring every plate tells a story of Nigerian heritage.":
+    - text: "4"
+    - heading "Artistic Food Presentation" [level=4]
+    - paragraph: See how we transform each dish into a visual masterpiece, ensuring every plate tells a story of Nigerian heritage.
+  - button "5 Quality Control Process Witness our meticulous quality control process ensuring every order meets our high standards before delivery.":
+    - text: "5"
+    - heading "Quality Control Process" [level=4]
+    - paragraph: Witness our meticulous quality control process ensuring every order meets our high standards before delivery.
+  - button "6 Customer Joy & Satisfaction Experience the genuine happiness and satisfaction our authentic Nigerian cuisine brings to our valued customers.":
+    - text: "6"
+    - heading "Customer Joy & Satisfaction" [level=4]
+    - paragraph: Experience the genuine happiness and satisfaction our authentic Nigerian cuisine brings to our valued customers.
+  - button "7 Celebration & Events See how our Nigerian cuisine becomes the centerpiece of celebrations, creating memorable moments for families and communities.":
+    - text: "7"
+    - heading "Celebration & Events" [level=4]
+    - paragraph: See how our Nigerian cuisine becomes the centerpiece of celebrations, creating memorable moments for families and communities.
+  - heading "Experience the Real Thing" [level=3]
+  - paragraph: Ready to taste the authentic flavors you just discovered? Order now and experience the same quality and care in every bite.
+  - link "Order Now":
+    - /url: /menu
+  - link "Contact Us":
+    - /url: /contact
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- navigation:
+  - link "Home":
+    - /url: /
+  - link "Menu":
+    - /url: /menu
+  - link "Frozen":
+    - /url: /frozen
+  - link "Catering":
+    - /url: /catering
+  - text: Cart
+- alert
+```

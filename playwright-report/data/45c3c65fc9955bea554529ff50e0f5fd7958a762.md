@@ -1,0 +1,554 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Milton Keynes, UK
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - navigation:
+    - link "About":
+      - /url: /about
+    - link "FAQ":
+      - /url: /faqs
+    - link "Contact":
+      - /url: /contact
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - navigation:
+    - link "Menu":
+      - /url: /menu
+    - link "Pricing":
+      - /url: /pricing
+    - link "Frozen":
+      - /url: /frozen
+    - link "Catering":
+      - /url: /catering
+  - button
+  - link "Order Now":
+    - /url: /menu
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Experience authentic West African cuisine delivered to your doorstep across the UK
+- text: Delivery £21.99 Next Day Delivery
+- link "Order Now":
+  - /url: /menu
+- button
+- main:
+  - heading "Complete Price List" [level=1]
+  - paragraph: Discover our authentic Nigerian cuisine with transparent pricing, generous portions, and exceptional value for every occasion
+  - heading "Best Value" [level=3]
+  - paragraph: Larger portions offer better value per person
+  - heading "Perfect for Groups" [level=3]
+  - paragraph: Ideal for families, events, and gatherings
+  - heading "Chef Quality" [level=3]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Premium Quality" [level=4]
+  - paragraph: Authentic Nigerian recipes with premium ingredients
+  - heading "Fresh Daily" [level=4]
+  - paragraph: All dishes prepared fresh daily in our kitchen
+  - heading "UK-Wide Delivery" [level=4]
+  - paragraph: Fast delivery across the United Kingdom
+  - heading "Food Safety" [level=4]
+  - paragraph: Highest standards of food hygiene and safety
+  - heading "Made with Love" [level=4]
+  - paragraph: Every dish prepared with care and tradition
+  - heading "Perfect for Groups" [level=4]
+  - paragraph: Generous portions ideal for families and events
+  - heading "Complete Price List" [level=1]
+  - paragraph: Discover our authentic Nigerian cuisine with transparent pricing and generous portions
+  - heading "Best Value" [level=3]
+  - paragraph: Larger portions offer better value per person
+  - heading "Perfect for Groups" [level=3]
+  - paragraph: Ideal for families, events, and gatherings
+  - heading "Chef Quality" [level=3]
+  - paragraph: Authentic recipes with premium ingredients
+  - button "🍽️All Items"
+  - button "🍚Rice Dishes"
+  - button "🥩Protein Dishes"
+  - button "🍲Soups & Stews"
+  - button "🥘Side Dishes"
+  - button "Show Value Calculator"
+  - link "Popular Best Value Jollof Rice Rice Dishes 2L 2 Litres Serves 4-6 people £35 £17.5/person 4L Best Value 4 Litres Serves 8-12 people £50 £12.5/person Half Cooler Half Cooler Perfect for events £90 £15.0/person Order Now":
+    - /url: /menu
+    - text: Popular Best Value
+    - heading "Jollof Rice" [level=3]
+    - paragraph: Rice Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £35 £17.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £50 £12.5/person Half Cooler
+    - paragraph: Half Cooler
+    - paragraph: Perfect for events
+    - text: £90 £15.0/person
+    - button "Order Now"
+  - link "Peppered Fried Rice Rice Dishes 2L 2 Litres Serves 4-6 people £45 £22.5/person 4L Best Value 4 Litres Serves 8-12 people £70 £17.5/person Order Now":
+    - /url: /menu
+    - heading "Peppered Fried Rice" [level=3]
+    - paragraph: Rice Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £45 £22.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £70 £17.5/person
+    - button "Order Now"
+  - link "Coconut Rice Rice Dishes 2L 2 Litres Serves 4-6 people £45 £22.5/person 4L Best Value 4 Litres Serves 8-12 people £70 £17.5/person Order Now":
+    - /url: /menu
+    - heading "Coconut Rice" [level=3]
+    - paragraph: Rice Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £45 £22.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £70 £17.5/person
+    - button "Order Now"
+  - link "Native Rice Rice Dishes 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Native Rice" [level=3]
+    - paragraph: Rice Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Yam Porridge (Asaro) Side Dishes 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Yam Porridge (Asaro)" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Popular Peppered Beef & Chicken Protein Dishes 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - text: Popular
+    - heading "Peppered Beef & Chicken" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Peppered Beef Only Protein Dishes 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Peppered Beef Only" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Peppered Chicken Hard Protein Dishes 2L 2 Litres Serves 4-6 people £55 £27.5/person 4L Best Value 4 Litres Serves 8-12 people £85 £21.3/person Order Now":
+    - /url: /menu
+    - heading "Peppered Chicken Hard" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £55 £27.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £85 £21.3/person
+    - button "Order Now"
+  - link "Peppered Grilled Soft Chicken Protein Dishes 2L 2 Litres Serves 4-6 people £55 £27.5/person 4L Best Value 4 Litres Serves 8-12 people £85 £21.3/person Order Now":
+    - /url: /menu
+    - heading "Peppered Grilled Soft Chicken" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £55 £27.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £85 £21.3/person
+    - button "Order Now"
+  - link "Peppered Fish Protein Dishes 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Peppered Fish" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Turkey Wings Protein Dishes 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Turkey Wings" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Peppered Goat Meat Protein Dishes 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Peppered Goat Meat" [level=3]
+    - paragraph: Protein Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Assorted Stew Soups & Stews 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Assorted Stew" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Chicken Stew Soups & Stews 2L 2 Litres Serves 4-6 people £55 £27.5/person 4L Best Value 4 Litres Serves 8-12 people £85 £21.3/person Order Now":
+    - /url: /menu
+    - heading "Chicken Stew" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £55 £27.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £85 £21.3/person
+    - button "Order Now"
+  - link "Fish Stew Soups & Stews 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Fish Stew" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Efo Riro Soups & Stews 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Efo Riro" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Efo Riro with Fish Soups & Stews 2L 2 Litres Serves 4-6 people £65 £32.5/person 4L Best Value 4 Litres Serves 8-12 people £95 £23.8/person Order Now":
+    - /url: /menu
+    - heading "Efo Riro with Fish" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £65 £32.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £95 £23.8/person
+    - button "Order Now"
+  - link "Egusi Soup Soups & Stews 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Egusi Soup" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Assorted Okra Soup Soups & Stews 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Assorted Okra Soup" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Seafood Okra Soup Soups & Stews 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Seafood Okra Soup" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Ayamase Sauce Soups & Stews 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Ayamase Sauce" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Ofada Sauce Soups & Stews 2L 2 Litres Serves 4-6 people £70 £35.0/person 4L Best Value 4 Litres Serves 8-12 people £110 £27.5/person Order Now":
+    - /url: /menu
+    - heading "Ofada Sauce" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £70 £35.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £110 £27.5/person
+    - button "Order Now"
+  - link "Ogbono Soup Soups & Stews 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Ogbono Soup" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Dodo Gizzards Side Dishes 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Dodo Gizzards" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Assorted Pepper Soup Side Dishes 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Assorted Pepper Soup" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Fish Pepper Soup Soups & Stews 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Fish Pepper Soup" [level=3]
+    - paragraph: Soups & Stews
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Plantain Side Dishes 2L 2 Litres Serves 4-6 people £40 £20.0/person 4L Best Value 4 Litres Serves 8-12 people £70 £17.5/person Order Now":
+    - /url: /menu
+    - heading "Plantain" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £40 £20.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £70 £17.5/person
+    - button "Order Now"
+  - link "Ewa Agoyin and Sauce Side Dishes 2L 2 Litres Serves 4-6 people £60 £30.0/person 4L Best Value 4 Litres Serves 8-12 people £90 £22.5/person Order Now":
+    - /url: /menu
+    - heading "Ewa Agoyin and Sauce" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £60 £30.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £90 £22.5/person
+    - button "Order Now"
+  - link "Beans Porridge Side Dishes 2L 2 Litres Serves 4-6 people £55 £27.5/person 4L Best Value 4 Litres Serves 8-12 people £85 £21.3/person Order Now":
+    - /url: /menu
+    - heading "Beans Porridge" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £55 £27.5/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £85 £21.3/person
+    - button "Order Now"
+  - link "Beans & Dodo Side Dishes 2L 2 Litres Serves 4-6 people £50 £25.0/person 4L Best Value 4 Litres Serves 8-12 people £80 £20.0/person Order Now":
+    - /url: /menu
+    - heading "Beans & Dodo" [level=3]
+    - paragraph: Side Dishes
+    - text: 2L
+    - paragraph: 2 Litres
+    - paragraph: Serves 4-6 people
+    - text: £50 £25.0/person 4L Best Value
+    - paragraph: 4 Litres
+    - paragraph: Serves 8-12 people
+    - text: £80 £20.0/person
+    - button "Order Now"
+  - heading "Snacks & Pastries" [level=2]
+  - link "Meat Pies Pack of 10 £20":
+    - /url: /menu
+    - heading "Meat Pies" [level=3]
+    - paragraph: Pack of 10
+    - text: £20
+  - link "Sausage Rolls Pack of 10 £20":
+    - /url: /menu
+    - heading "Sausage Rolls" [level=3]
+    - paragraph: Pack of 10
+    - text: £20
+  - link "Chicken Pies Pack of 10 £20":
+    - /url: /menu
+    - heading "Chicken Pies" [level=3]
+    - paragraph: Pack of 10
+    - text: £20
+  - link "Fish Pies Pack of 10 £20":
+    - /url: /menu
+    - heading "Fish Pies" [level=3]
+    - paragraph: Pack of 10
+    - text: £20
+  - link "Puff Puff Tray £40":
+    - /url: /menu
+    - heading "Puff Puff" [level=3]
+    - paragraph: Tray
+    - text: £40
+  - link "Mix and Match Tray £50":
+    - /url: /menu
+    - heading "Mix and Match" [level=3]
+    - paragraph: Tray
+    - text: £50
+  - heading "Fish Platters" [level=2]
+  - link "Tilapia Fish Platter Combo Platter £30":
+    - /url: /menu
+    - heading "Tilapia Fish Platter" [level=3]
+    - paragraph: Combo Platter
+    - text: £30
+  - link "Croker Fish Platter Combo Platter £35":
+    - /url: /menu
+    - heading "Croker Fish Platter" [level=3]
+    - paragraph: Combo Platter
+    - text: £35
+  - heading "Ready to Experience Authentic Nigerian Cuisine?" [level=3]
+  - paragraph: Order now and enjoy our delicious dishes with generous portions perfect for sharing with family and friends.
+  - link "Order Now":
+    - /url: /menu
+    - button "Order Now"
+  - button "Learn More"
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- alert
+```

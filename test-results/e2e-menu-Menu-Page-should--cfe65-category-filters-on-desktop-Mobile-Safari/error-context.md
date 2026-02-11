@@ -1,0 +1,369 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Milton Keynes, UK
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - navigation:
+    - link "About":
+      - /url: /about
+    - link "FAQ":
+      - /url: /faqs
+    - link "Contact":
+      - /url: /contact
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - navigation:
+    - link "Menu":
+      - /url: /menu
+    - link "Pricing":
+      - /url: /pricing
+    - link "Frozen":
+      - /url: /frozen
+    - link "Catering":
+      - /url: /catering
+  - button
+  - link "Order Now":
+    - /url: /menu
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Experience authentic West African cuisine delivered to your doorstep across the UK
+- text: Delivery £21.99 UK-Wide Delivery
+- link "Order Now":
+  - /url: /menu
+- button
+- main:
+  - heading "Our Menu" [level=1]
+  - paragraph: Discover the rich flavors of Nigeria and West Africa, each dish tells a story of tradition and heritage
+  - textbox "Search for dishes..."
+  - text: 🔍
+  - button "🍽️ All Dishes"
+  - button "Rice Dishes"
+  - button "Soups & Stews"
+  - button "Protein Dishes"
+  - button "Side Dishes"
+  - button "Snacks & Pastries"
+  - button "Fish Platters"
+  - img "Jollof Rice"
+  - heading "Jollof Rice" [level=3]
+  - paragraph: Our signature Jollof rice cooked with rich tomato sauce and aromatic spices
+  - text: From £35.00 3 size options
+  - img "Fried Rice"
+  - heading "Fried Rice" [level=3]
+  - paragraph: Flavorful fried rice with a perfect blend of peppers and seasonings
+  - text: From £45.00 2 size options
+  - img "Coconut Rice"
+  - heading "Coconut Rice" [level=3]
+  - paragraph: Aromatic coconut rice with a perfect blend of peppers
+  - text: From £45.00 2 size options
+  - img "Ofada Rice"
+  - heading "Ofada Rice" [level=3]
+  - paragraph: Traditional Nigerian brown rice variety
+  - text: From £40.00 2 size options
+  - img "Peppered Beef and Chicken"
+  - text: Customizable
+  - heading "Peppered Beef and Chicken" [level=3]
+  - paragraph: Perfectly seasoned combination of beef and chicken
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Peppered Beef and Fish"
+  - text: Customizable
+  - heading "Peppered Beef and Fish" [level=3]
+  - paragraph: Perfectly seasoned beef and fish in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Peppered Beef and Turkey"
+  - text: Customizable
+  - heading "Peppered Beef and Turkey" [level=3]
+  - paragraph: Combination of beef and turkey in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Peppered Beef Only"
+  - text: Customizable
+  - heading "Peppered Beef Only" [level=3]
+  - paragraph: Premium beef in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Peppered Chicken Hard"
+  - text: Customizable
+  - heading "Peppered Chicken Hard" [level=3]
+  - paragraph: Hard chicken in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £55.00 2 size options
+  - img "Peppered Grilled Soft Chicken"
+  - text: Customizable
+  - heading "Peppered Grilled Soft Chicken" [level=3]
+  - paragraph: Grilled soft chicken in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £55.00 2 size options
+  - img "Peppered Soft Chicken"
+  - text: Customizable
+  - heading "Peppered Soft Chicken" [level=3]
+  - paragraph: Tender soft chicken in rich pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £55.00 2 size options
+  - img "Turkey Wings"
+  - text: Customizable
+  - heading "Turkey Wings" [level=3]
+  - paragraph: Seasoned and grilled turkey wings
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Peppered Goat Meat"
+  - text: Customizable
+  - heading "Peppered Goat Meat" [level=3]
+  - paragraph: Premium goat meat in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Peppered Mackerel Fish"
+  - text: Customizable
+  - heading "Peppered Mackerel Fish" [level=3]
+  - paragraph: Mackerel fish in pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Peppered Hake Fish"
+  - text: Customizable
+  - heading "Peppered Hake Fish" [level=3]
+  - paragraph: Fresh hake fish in rich pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Peppered Turkey"
+  - text: Customizable
+  - heading "Peppered Turkey" [level=3]
+  - paragraph: Premium turkey in rich pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Assorted Stew"
+  - text: Customizable
+  - heading "Assorted Stew" [level=3]
+  - paragraph: Rich stew with assorted meat
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Chicken Stew"
+  - text: Customizable
+  - heading "Chicken Stew" [level=3]
+  - paragraph: Rich stew with chicken
+  - paragraph: Spice level customizable
+  - text: From £55.00 2 size options
+  - img "Fish Stew"
+  - text: Customizable
+  - heading "Fish Stew" [level=3]
+  - paragraph: Rich stew with fish
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Efo Riro"
+  - text: Customizable
+  - heading "Efo Riro" [level=3]
+  - paragraph: Rich and nutritious Nigerian spinach stew
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Efo Riro with Fish"
+  - text: Customizable
+  - heading "Efo Riro with Fish" [level=3]
+  - paragraph: Spinach stew with fish
+  - paragraph: Spice level customizable
+  - text: From £65.00 2 size options
+  - img "Egusi Soup"
+  - text: Customizable
+  - heading "Egusi Soup" [level=3]
+  - paragraph: Rich melon seed soup with assorted meat
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Assorted Okra Soup"
+  - text: Customizable
+  - heading "Assorted Okra Soup" [level=3]
+  - paragraph: Okra soup with assorted meat
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Seafood Okra Soup"
+  - text: Customizable
+  - heading "Seafood Okra Soup" [level=3]
+  - paragraph: Okra soup with seafood
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Ayamase Sauce"
+  - text: Customizable
+  - heading "Ayamase Sauce" [level=3]
+  - paragraph: Spicy green pepper sauce
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Ofada Sauce"
+  - text: Customizable
+  - heading "Ofada Sauce" [level=3]
+  - paragraph: Traditional sauce for Ofada rice
+  - paragraph: Spice level customizable
+  - text: From £70.00 2 size options
+  - img "Ogbono Soup"
+  - text: Customizable
+  - heading "Ogbono Soup" [level=3]
+  - paragraph: Traditional Nigerian Ogbono soup
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Fish Pepper Soup"
+  - text: Customizable
+  - heading "Fish Pepper Soup" [level=3]
+  - paragraph: Spicy Nigerian fish pepper soup
+  - paragraph: Spice level customizable
+  - text: From £60.00 2 size options
+  - img "Dodo Gizzards"
+  - heading "Dodo Gizzards" [level=3]
+  - paragraph: Fried plantain with gizzards
+  - text: From £60.00 2 size options
+  - img "Assorted Pepper Soup"
+  - heading "Assorted Pepper Soup" [level=3]
+  - paragraph: Spicy pepper soup with assorted meat
+  - text: From £60.00 2 size options
+  - img "Plantain"
+  - heading "Plantain" [level=3]
+  - paragraph: Fried plantain (Dodo)
+  - text: From £40.00 2 size options
+  - img "Ewa Agoyin and Sauce"
+  - heading "Ewa Agoyin and Sauce" [level=3]
+  - paragraph: Mashed beans with special sauce
+  - text: From £60.00 2 size options
+  - img "Yam Porridge (Asaro)"
+  - heading "Yam Porridge (Asaro)" [level=3]
+  - paragraph: Creamy yam porridge cooked with palm oil and peppers
+  - text: From £60.00 2 size options
+  - img "Beans Porridge"
+  - heading "Beans Porridge" [level=3]
+  - paragraph: Nigerian style beans porridge
+  - text: From £55.00 2 size options
+  - img "Meat Pies"
+  - heading "Meat Pies" [level=3]
+  - paragraph: Nigerian style meat pies
+  - text: From £20.00 1 size options
+  - img "Sausage Rolls"
+  - heading "Sausage Rolls" [level=3]
+  - paragraph: Nigerian style sausage rolls
+  - text: From £20.00 1 size options
+  - img "Chicken Pies"
+  - heading "Chicken Pies" [level=3]
+  - paragraph: Nigerian style chicken pies
+  - text: From £20.00 1 size options
+  - img "Fish Pies"
+  - heading "Fish Pies" [level=3]
+  - paragraph: Nigerian style fish pies
+  - text: From £20.00 1 size options
+  - img "Puff Puff"
+  - heading "Puff Puff" [level=3]
+  - paragraph: Nigerian deep-fried dough balls
+  - text: From £40.00 1 size options
+  - img "Mix and Match"
+  - heading "Mix and Match" [level=3]
+  - paragraph: Assorted Nigerian snacks
+  - text: From £50.00 1 size options
+  - img "Tilapia Fish Platter"
+  - heading "Tilapia Fish Platter" [level=3]
+  - paragraph: Grilled Tilapia fish platter served with fried yam, fried plantain, and sauce.
+  - text: From £30.00 1 size options
+  - img "Croacker Fish Platter"
+  - heading "Croacker Fish Platter" [level=3]
+  - paragraph: Grilled Croacker fish platter served with fried yam, fried plantain, and sauce.
+  - text: From £35.00 1 size options
+  - heading "Portion Sizes & Pricing" [level=2]
+  - paragraph: Choose the perfect portion size for your needs. All our dishes are available in three convenient sizes.
+  - heading "Small Portion" [level=3]
+  - text: £8.99
+  - paragraph: Perfect for one person or as a side dish
+  - list:
+    - listitem: Single serving
+    - listitem: Great for lunch
+    - listitem: Quick meal option
+  - button "Order Now"
+  - heading "Medium Portion" [level=3]
+  - text: £12.99
+  - paragraph: Ideal for two people or a hearty meal
+  - list:
+    - listitem: Feeds 2 people
+    - listitem: Most popular choice
+    - listitem: Great value
+  - button "Order Now"
+  - heading "Large Portion" [level=3]
+  - text: £16.99
+  - paragraph: Perfect for families or sharing
+  - list:
+    - listitem: Feeds 3-4 people
+    - listitem: Family size
+    - listitem: Best value for groups
+  - button "Order Now"
+  - heading "Complete Price List & Value Calculator" [level=2]
+  - paragraph: Explore our comprehensive pricing with interactive value calculator, portion guides, and best value recommendations.
+  - button "View Complete Price List"
+  - button "Order Now"
+  - heading "Ready to Order?" [level=3]
+  - paragraph: Experience the authentic flavors of Nigeria delivered to your doorstep
+  - button "Browse Menu"
+  - button "Contact Us"
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+  - button
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- alert
+```

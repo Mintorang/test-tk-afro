@@ -1,0 +1,131 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Milton Keynes, UK
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - navigation:
+    - link "About":
+      - /url: /about
+    - link "FAQ":
+      - /url: /faqs
+    - link "Contact":
+      - /url: /contact
+  - link "TK Afro Kitchen TKAfro Kitchen":
+    - /url: /
+    - img "TK Afro Kitchen"
+    - text: TKAfro Kitchen
+  - navigation:
+    - link "Menu":
+      - /url: /menu
+    - link "Pricing":
+      - /url: /pricing
+    - link "Frozen":
+      - /url: /frozen
+    - link "Catering":
+      - /url: /catering
+  - button "1"
+  - link "Order Now":
+    - /url: /menu
+- heading "🚚 UK-Wide Delivery" [level=3]
+- paragraph: Experience authentic West African cuisine delivered to your doorstep across the UK
+- text: Delivery £21.99 Next Day Delivery
+- link "Order Now":
+  - /url: /menu
+- button
+- main:
+  - text: 1 Delivery Details 2 Payment
+  - heading "Payment" [level=2]
+  - button "← Continue Shopping"
+  - button "← Edit Details"
+  - heading "Card Payment" [level=3]
+  - button "Change Method"
+  - text: Card Details
+  - iframe
+  - text: "Total Amount: £56.99 Processing fee: Included"
+  - button "Pay £56.99"
+  - paragraph: Your payment is secured by Stripe
+  - paragraph: 256-bit SSL encryption • PCI DSS compliant
+  - heading "Order Summary" [level=3]
+  - img
+  - paragraph: UK-Wide Delivery
+  - paragraph: Monday 21 July (Next working day)
+  - paragraph: Jollof Rice
+  - paragraph: "2L • Qty: 1"
+  - paragraph: 2 Litres
+  - paragraph: £35.00
+  - text: Subtotal £35.00 UK Delivery Fee £21.99
+  - paragraph: Next-day delivery anywhere in UK mainland
+  - text: Total £56.99
+- contentinfo:
+  - img "TK Afro Kitchen"
+  - heading "TKAfro Kitchen" [level=3]
+  - paragraph: Authentic Nigerian Cuisine
+  - paragraph: Experience the rich flavors of Nigeria and West Africa. Our authentic dishes are prepared with traditional recipes and premium ingredients, delivered fresh to your doorstep across the UK.
+  - text: "Milton Keynes, UK chef@tkafrokitchen.com Mon-Sat: 9AM-9PM"
+  - link:
+    - /url: https://instagram.com/tk_afro_kitchen
+  - link:
+    - /url: https://facebook.com/Tk Afro kitchen
+  - link:
+    - /url: "#"
+  - heading "Quick Links" [level=4]
+  - list:
+    - listitem:
+      - link "Menu":
+        - /url: /menu
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Foods":
+        - /url: /frozen
+    - listitem:
+      - link "About Us":
+        - /url: /about
+    - listitem:
+      - link "Contact":
+        - /url: /contact
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "UK-Wide Delivery":
+        - /url: /menu
+    - listitem:
+      - link "Event Catering":
+        - /url: /catering
+    - listitem:
+      - link "Frozen Meals":
+        - /url: /frozen
+    - listitem:
+      - link "Corporate Orders":
+        - /url: /contact
+    - listitem:
+      - link "Bulk Orders":
+        - /url: /contact
+    - listitem:
+      - link "Custom Menus":
+        - /url: /contact
+  - heading "Premium Quality" [level=5]
+  - paragraph: Authentic recipes with premium ingredients
+  - heading "Food Safety" [level=5]
+  - paragraph: Highest standards of hygiene and safety
+  - heading "Fresh Daily" [level=5]
+  - paragraph: All dishes prepared fresh daily
+  - heading "Family Friendly" [level=5]
+  - paragraph: Perfect portions for families and groups
+  - paragraph: © 2025 TKAfro Kitchen. All rights reserved.
+  - text: Website developed by
+  - link "CBIS":
+    - /url: https://cbis.dev
+  - button
+- link "Website by CBIS":
+  - /url: https://cbis.dev
+- alert
+```
