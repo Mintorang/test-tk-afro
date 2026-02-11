@@ -15,29 +15,25 @@ export function GlassCard({ children, className = '', delay = 0, onClick }: Glas
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ 
-        y: -8,
-        transition: { duration: 0.3 }
-      }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      // Desktop Hover
+      whileHover={{ y: -5 }} 
+      // Mobile Tap Feedback (Massive improvement for UX)
+      whileTap={{ scale: 0.98, brightness: 1.1 }}
       onClick={onClick}
       className={`
-        relative overflow-hidden rounded-xl
-        bg-white/10 backdrop-blur-md border border-white/20
-        shadow-xl hover:shadow-2xl
-        transition-all duration-300 ease-out
+        glass-card group
         ${onClick ? 'cursor-pointer' : ''}
         ${className}
       `}
     >
-      {/* Glassmorphism effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-orange-500/10 to-transparent" />
+      {/* Optimized Background Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-tr from-orange-500/10 via-transparent to-transparent pointer-events-none" />
       
-      {/* Content */}
-      <div className="relative z-10 p-6">
+      <div className="relative z-10 p-5 md:p-6">
         {children}
       </div>
     </motion.div>
   );
-} 
+}
