@@ -6,32 +6,34 @@ import { ReactNode } from 'react';
 interface GlassCardProps {
   children: ReactNode;
   className?: string;
-  delay?: number;
   onClick?: () => void;
+  delay?: number;
 }
 
-export function GlassCard({ children, className = '', delay = 0, onClick }: GlassCardProps) {
+export function GlassCard({ children, className = "", onClick, delay = 0 }: GlassCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
-      // Desktop Hover
-      whileHover={{ y: -5 }} 
-      // Mobile Tap Feedback (Massive improvement for UX)
-      whileTap={{ scale: 0.98, brightness: 1.1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      whileHover={{ y: -5 }}
+      // Fixed the brightness error by putting it inside filter
+      whileTap={{ scale: 0.98, filter: "brightness(1.1)" }}
       onClick={onClick}
       className={`
         glass-card group
-        ${onClick ? 'cursor-pointer' : ''}
+        relative overflow-hidden rounded-2xl 
+        bg-white/5 border border-white/10 backdrop-blur-md
+        hover:bg-white/10 hover:border-orange-500/30
+        transition-all duration-300 shadow-xl
         ${className}
       `}
     >
-      {/* Optimized Background Gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-tr from-orange-500/10 via-transparent to-transparent pointer-events-none" />
+      {/* Subtle shine effect on hover */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      <div className="relative z-10 p-5 md:p-6">
+      <div className="relative z-10">
         {children}
       </div>
     </motion.div>
