@@ -66,22 +66,27 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-orange-500/30`}>
         <CartProvider>
-          {/* Header Section: Now fills top of page without gaps */}
-          <div className="relative z-[100] w-full flex flex-col">
+          {/* IMPROVEMENT: 
+              The header is now sticky to the top and spans the FULL width.
+              The 'z-[100]' ensures it stays above all other content.
+          */}
+          <div className="sticky top-0 z-[100] w-full bg-background">
              <DeliveryBanner />
              <Header /> 
           </div>
 
-          {/* Main Content: Removed the large pt-32 padding so it flows naturally after the header */}
+          {/* The main content area no longer has artificial top padding,
+              allowing the first section (Hero) to tuck right under the header.
+          */}
           <main className="min-h-screen relative overflow-x-hidden">
             {children}
           </main>
 
           <Footer />
 
-          {/* Blow up the attribution bit and move it out of floating mode */}
-          <div className="py-8 bg-zinc-950 flex justify-center border-t border-white/5">
-            <WebDesignAttribution variant="expanded" className="scale-110" />
+          {/* Enlarged attribution bit as requested */}
+          <div className="py-12 bg-zinc-950 flex justify-center border-t border-white/5">
+            <WebDesignAttribution variant="expanded" className="scale-125 transition-transform hover:scale-110" />
           </div>
 
           <MobileNav />
