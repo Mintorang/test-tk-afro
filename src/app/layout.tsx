@@ -87,7 +87,7 @@ export default function RootLayout({
 
           {/* Attribution */}
           <div className="py-12 bg-zinc-950 flex justify-center border-t border-white/5">
-            <WebDesignAttribution variant="expanded" className="scale-125 transition-transform hover:scale-110" />
+            <WebDesignAttribution variant="detailed" className="scale-125 transition-transform hover:scale-110" />
           </div>
 
           <MobileNav />
