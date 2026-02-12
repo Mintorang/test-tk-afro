@@ -1,20 +1,20 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollAnimation } from '@/components/ui/ScrollAnimation';
 import { AnimatedButton } from '@/components/ui/AnimatedButton';
-import { featuredDishes, categories, allMenuItems } from '@/data/sample-menu';
+import { categories, allMenuItems } from '@/data/sample-menu';
 import { MobileCategoryFilter } from '@/components/menu/MobileCategoryFilter';
 import { ResponsiveMenuGrid } from '@/components/menu/ResponsiveMenuGrid';
 import { SEOHead } from '@/components/ui/SEOHead';
+import { Search, UtensilsCrossed, Filter, ArrowDown } from 'lucide-react';
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const menuItemsRef = useRef<HTMLElement>(null);
 
-  // Filter items based on category and search
   const filteredItems = allMenuItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -22,39 +22,11 @@ export default function MenuPage() {
     return matchesCategory && matchesSearch;
   });
 
-  // Auto-scroll to menu items when category changes on mobile
-  useEffect(() => {
-    if (selectedCategory && menuItemsRef.current) {
-      // Check if we're on mobile (you can adjust this breakpoint)
-      const isMobile = window.innerWidth < 768;
-      
-      if (isMobile) {
-        // Small delay to ensure the menu items have updated
-        setTimeout(() => {
-          if (menuItemsRef.current) {
-            menuItemsRef.current.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        }, 300);
-      }
-    }
-  }, [selectedCategory]);
-
-  // Enhanced category selection with scroll
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
-    
-    // Immediate scroll to menu items on mobile
     if (window.innerWidth < 768 && menuItemsRef.current) {
       setTimeout(() => {
-        if (menuItemsRef.current) {
-          menuItemsRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+        menuItemsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
   };
@@ -63,123 +35,121 @@ export default function MenuPage() {
     <>
       <SEOHead 
         title="Our Menu | Authentic African Dishes | TK Afro Kitchen"
-        description="Explore our authentic African menu featuring Nigerian Jollof Rice, Ghanaian Banku, and traditional West African dishes. Fresh ingredients, 5-star hygiene, UK delivery. Order online today!"
-        keywords="African menu, Nigerian food, Ghanaian cuisine, Jollof rice, Banku, West African dishes, African restaurant menu, Milton Keynes"
+        description="Explore our authentic African menu featuring Nigerian Jollof Rice, Ghanaian Banku, and traditional West African dishes."
         canonical="https://tkafrokitchen.com/menu"
       />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 pt-16 sm:pt-24">
-        {/* Hero Section - Mobile Optimized */}
-        <section className="relative py-12 sm:py-16 md:py-20 px-4">
-          <div className="container mx-auto text-center">
-            <ScrollAnimation>
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6"
-              >
-                <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent">
-                  Our Menu
-                </span>
-              </motion.h1>
-            </ScrollAnimation>
-            
-            <ScrollAnimation delay={0.2}>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-2 sm:px-4"
-              >
-                Discover the rich flavors of Nigeria and West Africa, each dish tells a story of tradition and heritage
-              </motion.p>
-            </ScrollAnimation>
+      
+      <div className="min-h-screen bg-background pt-32 sm:pt-40">
+        {/* 1. HIGH-IMPACT HEADER */}
+        <section className="px-4 mb-12 sm:mb-20">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
+            <div className="max-w-2xl">
+              <ScrollAnimation>
+                <h1 className="text-5xl md:text-8xl font-black italic tracking-tighter uppercase leading-[0.8] mb-6">
+                  THE <span className="text-primary">MENU</span>
+                </h1>
+                <p className="text-gray-400 text-lg md:text-xl font-medium max-w-lg leading-relaxed">
+                  Discover the rich flavors of Nigeria and West Africa, where every dish tells a story of tradition.
+                </p>
+              </ScrollAnimation>
+            </div>
 
-            {/* Desktop Search Bar - Hidden on Mobile */}
-            <ScrollAnimation delay={0.4}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="max-w-md mx-auto mb-6 sm:mb-8 md:mb-12 hidden md:block"
-              >
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search for dishes..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-orange-500/30 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-sm sm:text-base"
-                  />
-                  <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                    🔍
-                  </div>
-                </div>
-              </motion.div>
-            </ScrollAnimation>
-
-            {/* Desktop Category Filter - Hidden on Mobile */}
-            <ScrollAnimation delay={0.6}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-12 hidden md:flex"
-              >
-                <motion.button
-                  onClick={() => handleCategorySelect('all')}
-                  className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border transition-all duration-300 text-sm sm:text-base ${
-                    selectedCategory === 'all'
-                      ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white border-orange-500'
-                      : 'bg-transparent text-gray-300 border-gray-600 hover:border-orange-500 hover:text-orange-400'
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  🍽️ All Dishes
-                </motion.button>
-                
-                {categories.map((category) => (
-                  <motion.button
-                    key={category.id}
-                    onClick={() => handleCategorySelect(category.name)}
-                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full border transition-all duration-300 text-sm sm:text-base ${
-                      selectedCategory === category.name
-                        ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white border-orange-500'
-                        : 'bg-transparent text-gray-300 border-gray-600 hover:border-orange-500 hover:text-orange-400'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {category.name}
-                  </motion.button>
-                ))}
-              </motion.div>
-            </ScrollAnimation>
+            {/* Stats Bento Block */}
+            <div className="hidden md:flex gap-4">
+               <div className="glass p-6 rounded-[2rem] text-center min-w-[120px]">
+                  <p className="text-primary font-black text-2xl leading-none">5.0</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-2">Rating</p>
+               </div>
+               <div className="glass p-6 rounded-[2rem] text-center min-w-[120px]">
+                  <UtensilsCrossed className="w-6 h-6 text-primary mx-auto" />
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-2">Authentic</p>
+               </div>
+            </div>
           </div>
         </section>
 
-        {/* Mobile Category Filter - Only visible on mobile */}
-        <div className="md:hidden">
-          <MobileCategoryFilter
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onCategorySelect={handleCategorySelect}
-            searchTerm={searchTerm}
-            onSearchChange={setSearchTerm}
-          />
+        {/* 2. SEARCH & FILTER BAR (STICKY) */}
+        <div className="sticky top-24 z-40 bg-background/80 backdrop-blur-md border-y border-white/5 py-6 mb-12">
+          <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-6 items-center">
+            
+            {/* Search - Ultra Modern */}
+            <div className="relative w-full md:w-96 group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 group-focus-within:text-primary transition-colors" />
+              <input
+                type="text"
+                placeholder="Search flavours..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-6 py-4 glass rounded-full text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-sm font-bold uppercase tracking-widest"
+              />
+            </div>
+
+            {/* Desktop Filters */}
+            <div className="hidden md:flex flex-wrap gap-2">
+              <button
+                onClick={() => handleCategorySelect('all')}
+                className={`px-6 py-3 rounded-full text-[10px] font-black tracking-widest uppercase transition-all
+                  ${selectedCategory === 'all' ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'glass text-gray-400 hover:text-white'}`}
+              >
+                All Dishes
+              </button>
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => handleCategorySelect(cat.name)}
+                  className={`px-6 py-3 rounded-full text-[10px] font-black tracking-widest uppercase transition-all
+                    ${selectedCategory === cat.name ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'glass text-gray-400 hover:text-white'}`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Menu Items Section */}
-        <section ref={menuItemsRef} className="py-6 sm:py-8 md:py-20">
-          <div className="container mx-auto">
-            <ResponsiveMenuGrid 
-              items={filteredItems} 
-              selectedCategory={selectedCategory}
-            />
+        {/* 3. MOBILE FILTER COMPONENT */}
+        <div className="md:hidden px-4 mb-8">
+           <div className="flex items-center gap-2 mb-4 text-primary font-black uppercase text-xs tracking-widest">
+              <Filter className="w-4 h-4" /> Filter by Category
+           </div>
+           <MobileCategoryFilter
+             categories={categories}
+             selectedCategory={selectedCategory}
+             onCategorySelect={handleCategorySelect}
+             searchTerm={searchTerm}
+             onSearchChange={setSearchTerm}
+           />
+        </div>
+
+        {/* 4. MAIN MENU GRID */}
+        <section ref={menuItemsRef} className="pb-32 px-4">
+          <div className="max-w-7xl mx-auto">
+            {filteredItems.length > 0 ? (
+              <ResponsiveMenuGrid 
+                items={filteredItems} 
+                selectedCategory={selectedCategory}
+              />
+            ) : (
+              <div className="text-center py-40 glass rounded-[3rem]">
+                 <Search className="w-12 h-12 text-gray-700 mx-auto mb-4" />
+                 <h3 className="text-xl font-black italic uppercase">No Dishes Found</h3>
+                 <p className="text-gray-500 text-sm mt-2">Try searching for something else.</p>
+              </div>
+            )}
           </div>
         </section>
 
+        {/* 5. FLOATING SCROLL INDICATOR (Subtle) */}
+        <div className="fixed bottom-32 right-8 hidden lg:flex flex-col items-center gap-4">
+           <span className="[writing-mode:vertical-lr] text-[10px] font-black uppercase tracking-[0.5em] text-gray-600">Scroll</span>
+           <div className="w-[1px] h-12 bg-white/10 relative overflow-hidden">
+              <motion.div 
+                animate={{ y: [0, 48] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                className="absolute top-0 w-full h-4 bg-primary"
+              />
+           </div>
+        </div>
       </div>
     </>
   );
