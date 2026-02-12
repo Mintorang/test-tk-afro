@@ -99,10 +99,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 3. INTERACTIVE MENU SECTION */}
-        <div className="mt-24 pt-12"> {/* Added padding to prevent header overlap during scroll */}
-           <InteractiveMenuExperience />
-        </div>
       
     </div>
   );
