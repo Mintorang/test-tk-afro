@@ -16,7 +16,7 @@
     @apply bg-[color:var(--background)] text-[color:var(--foreground)] antialiased;
   }
   
-  /* CRITICAL FIX: Hide the yellow/orange line and grey artifacts */
+  /* REMOVE ARTIFACTS: Hides yellow lines, scroll lines, and grey blobs */
   .yellow-line, 
   .scroll-line, 
   [class*="border-primary/30"],
@@ -28,6 +28,11 @@
 
   h1, h2, h3 {
     @apply font-black tracking-tighter italic uppercase text-white;
+  }
+
+  /* CUSTOM SCROLL MARGIN: Prevents header from blocking content when jumping to sections */
+  section, [id] {
+    scroll-margin-top: 100px;
   }
 }
 
@@ -46,9 +51,27 @@
     @apply text-white;
     text-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
   }
+
+  /* FROZEN SECTION UI FIX: Spacing between Title and Price */
+  .product-header-row {
+    @apply flex justify-between items-start gap-6 mb-2;
+  }
+}
+
+@layer utilities {
+  /* MANUAL SCROLLBAR HIDE: Defines the class so @apply works without the plugin */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari and Opera */
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  /* This now works because it is defined in @layer utilities above */
   @apply scrollbar-hide;
 }
