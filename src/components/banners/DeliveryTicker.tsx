@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function DeliveryTicker() {
   const deliveryMessages = [
-    { icon: Truck, text: "🚚 UK-Wide Delivery from £24.99", color: "text-orange-400" },
+    { icon: Truck, text: "🚚 UK-Wide Delivery at £30.00", color: "text-orange-400" },
     { icon: MapPin, text: "📍 Free Collection Available", color: "text-green-400" },
     { icon: Clock, text: "⏰ Fresh Nigerian Cuisine Daily", color: "text-blue-400" },
     { icon: Truck, text: "🌍 Nationwide Delivery to Any UK Postcode", color: "text-orange-400" },
@@ -49,4 +49,5 @@ export function DeliveryTicker() {
       </div>
     </div>
   );
+
 }
