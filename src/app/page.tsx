@@ -9,7 +9,7 @@ import {
   MapPin, 
   Mail, 
   ChefHat, 
-  Truck, 
+  Sparkles, 
   ArrowUpRight,
   Instagram,
   Facebook
@@ -39,7 +39,7 @@ export default function HomePage() {
                 Beyond <span className="text-primary">Flavour</span>
               </h2>
               <p className="text-gray-400 mt-6 max-w-md font-medium text-lg">
-                Authentic Nigerian & Ghanaian heritage delivered to your doorstep in Milton Keynes.
+                Authentic Nigerian & Ghanaian heritage delivered to your doorstep.
               </p>
             </div>
             <div className="flex items-center gap-6">
@@ -78,23 +78,36 @@ export default function HomePage() {
              </div>
           </div>
 
-          {/* Delivery Block */}
-          <div className="md:col-span-3 h-[600px] bg-primary rounded-[3rem] p-12 relative overflow-hidden group cursor-pointer">
-             <Truck className="absolute -right-8 -bottom-8 w-64 h-64 text-white/10 group-hover:translate-x-6 transition-transform duration-1000" />
+          {/* NEW: SMALL TREATS PACKAGE DEAL BLOCK */}
+          <div className="md:col-span-3 h-[600px] bg-zinc-900 border border-white/5 rounded-[3rem] p-12 relative overflow-hidden group">
+             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-50" />
              <div className="relative z-10 h-full flex flex-col justify-center">
-                <span className="text-white/60 font-black uppercase tracking-[0.3em] text-xs mb-4 italic">Delivery Service</span>
+                <Sparkles className="w-12 h-12 text-primary mb-6" />
+                <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4">Limited Time Deal</span>
                 <h4 className="text-5xl font-black text-white italic leading-[0.9] uppercase tracking-tighter">
-                  FREE DELIVERY <br/> ON SELECTED <br/> ORDERS
+                  SMALL TREATS <br/> PACKAGE
                 </h4>
-                <p className="text-white/80 text-sm mt-8 uppercase tracking-widest font-bold">Milton Keynes & Surrounding Areas</p>
+                <p className="text-gray-400 text-sm mt-8 max-w-xs font-bold uppercase tracking-widest leading-relaxed">
+                  A curated selection of our best-selling finger foods. Perfect for sharing or sampling.
+                </p>
+                <Link href="/menu" className="inline-block mt-8">
+                   <button className="px-8 py-4 bg-white text-black font-black uppercase tracking-widest rounded-2xl hover:bg-primary hover:text-white transition-all">
+                      Get the Deal — £250.00
+                   </button>
+                </Link>
              </div>
           </div>
         </div>
 
-        {/* 3. INTERACTIVE MENU SECTION (Integrated here) */}
-        <div className="mt-24">
+        {/* 3. INTERACTIVE MENU SECTION */}
+        <div className="mt-24 pt-12"> {/* Added padding to prevent header overlap during scroll */}
            <InteractiveMenuExperience />
         </div>
+      </section>
+
+      {/* 4. BRAND STORYTELLING */}
+      <section className="bg-zinc-950/50 py-32 border-y border-white/5">
+        <BrandStorytelling />
       </section>
 
       {/* 5. CONTACT DOCK */}
