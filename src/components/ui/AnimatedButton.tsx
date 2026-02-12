@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 interface AnimatedButtonProps {
   children: ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'glass'; // Added 'glass'
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   disabled?: boolean;
@@ -20,49 +20,56 @@ export function AnimatedButton({
   className = '',
   disabled = false 
 }: AnimatedButtonProps) {
+  
+  // Updated to rounded-full for that boutique 2026 look
   const baseClasses = `
-    relative overflow-hidden rounded-lg font-semibold
+    relative overflow-hidden rounded-full font-black uppercase tracking-[0.15em] italic
     transition-all duration-300 ease-out
     focus:outline-none focus:ring-2 focus:ring-orange-500/50
-    disabled:opacity-50 disabled:cursor-not-allowed
+    disabled:opacity-40 disabled:cursor-not-allowed
+    flex items-center justify-center
   `;
 
   const variantClasses = {
     primary: `
-      bg-gradient-to-r from-orange-500 to-yellow-500
-      text-white shadow-lg
-      hover:from-orange-600 hover:to-yellow-600
-      hover:shadow-orange-500/25
+      bg-primary text-white
+      shadow-[0_0_0px_rgba(249,115,22,0)]
+      hover:shadow-[0_0_25px_rgba(249,115,22,0.5)]
     `,
     secondary: `
-      bg-gradient-to-r from-gray-700 to-gray-800
-      text-white shadow-lg
-      hover:from-gray-600 hover:to-gray-700
-      hover:shadow-gray-500/25
+      bg-zinc-800 text-white
+      hover:bg-zinc-700
+      hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]
     `,
     outline: `
-      bg-transparent border-2 border-orange-500
-      text-orange-500
-      hover:bg-orange-500 hover:text-white
-      hover:shadow-orange-500/25
+      bg-transparent border border-primary/40
+      text-primary
+      hover:bg-primary hover:text-white
+      hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]
+    `,
+    glass: `
+      bg-white/5 backdrop-blur-md border border-white/10
+      text-white hover:bg-white/10
+      hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]
     `
   };
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    sm: 'px-6 py-2.5 text-[10px]',
+    md: 'px-8 py-3.5 text-xs',
+    lg: 'px-10 py-4 text-sm'
   };
 
   return (
     <motion.button
       whileHover={{ 
-        scale: 1.05,
-        transition: { duration: 0.2 }
+        scale: 1.02, // Subtle scale is more "luxury" than 1.05
+        y: -2,
+        transition: { duration: 0.1, ease: "easeOut" }
       }}
       whileTap={{ 
-        scale: 0.95,
-        transition: { duration: 0.1 }
+        scale: 0.98,
+        transition: { duration: 0.05 }
       }}
       onClick={onClick}
       disabled={disabled}
@@ -73,26 +80,26 @@ export function AnimatedButton({
         ${className}
       `}
     >
-      {/* Animated background gradient */}
+      {/* Shine Sweep Effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
-        initial={{ x: '-100%' }}
-        whileHover={{ x: '100%' }}
-        transition={{ duration: 0.6 }}
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+        initial={{ x: '-150%' }}
+        whileHover={{ x: '150%' }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
       />
       
-      {/* Content */}
+      {/* Label Content */}
       <span className="relative z-10 flex items-center justify-center gap-2">
         {children}
       </span>
       
-      {/* Glow effect */}
+      {/* Inner Underglow Pool */}
       <motion.div
-        className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-400/20 to-yellow-400/20"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-white/50 blur-[4px]"
+        initial={{ opacity: 0, width: "0%" }}
+        whileHover={{ opacity: 1, width: "60%" }}
         transition={{ duration: 0.3 }}
       />
     </motion.button>
   );
-} 
+}
