@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Plus, Info } from 'lucide-react';
 
 interface SizeOption {
   size: string;
@@ -15,7 +16,6 @@ interface MenuCardProps {
   name: string;
   description?: string;
   imageUrl: string;
-  // optional: either a single price or a set of sizeOptions
   price?: number;
   sizeOptions?: SizeOption[];
   category: string;
@@ -37,102 +37,92 @@ export function MenuCard({
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const formatPrice = (val: number) => {
-    try {
-      return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(val);
-    } catch (e) {
-      return `£${val}`;
-    }
+    return new Intl.NumberFormat('en-GB', { 
+      style: 'currency', 
+      currency: 'GBP', 
+      minimumFractionDigits: 0 
+    }).format(val);
   };
 
   const displayPriceNum = (() => {
     if (sizeOptions && sizeOptions.length > 0) {
-      // use the minimum price for "From" display
       return Math.min(...sizeOptions.map(s => (typeof s.price === 'number' ? s.price : Infinity)));
     }
-    if (typeof price === 'number') return price;
-    return 0;
+    return price ?? 0;
   })();
 
-  const priceLabel = (() => {
-    if (sizeOptions && sizeOptions.length > 1) return `From ${formatPrice(displayPriceNum)}`;
-    if (sizeOptions && sizeOptions.length === 1) {
-      const opt = sizeOptions[0];
-      const sizeName = opt.size && opt.size !== 'default' ? `${opt.size} ` : '';
-      return `${sizeName}${formatPrice(opt.price)}`;
-    }
-    return formatPrice(displayPriceNum);
-  })();
+  const isVariable = sizeOptions && sizeOptions.length > 1;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ y: -12, transition: { duration: 0.3 } }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
       onClick={onClick}
-      className={`
-        group relative overflow-hidden rounded-2xl
-        bg-white/5 backdrop-blur-sm border border-white/10
-        shadow-lg hover:shadow-2xl
-        transition-all duration-500 ease-out
-        ${onClick ? 'cursor-pointer' : ''}
-      `}
+      className="group relative flex flex-col h-full rounded-[2rem] bg-zinc-900/40 border border-white/5 overflow-hidden hover:border-primary/50 transition-all duration-500"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-orange-500/5 to-transparent" />
-
-      <div className="relative h-48 overflow-hidden">
+      {/* Image Container */}
+      <div className="relative h-64 w-full overflow-hidden">
         <Image
           src={imageUrl}
           alt={name}
           fill
-          className={`object-cover transition-all duration-700 ${imageLoaded ? 'scale-100' : 'scale-110'} group-hover:scale-110`}
+          className={`
+            object-cover transition-transform duration-1000 ease-out
+            ${imageLoaded ? 'scale-100' : 'scale-110'}
+            group-hover:scale-110
+          `}
           onLoad={() => setImageLoaded(true)}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+        
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+        
+        {/* Top Badges */}
+        <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
+          <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-[10px] font-black uppercase tracking-widest text-primary">
+            {category}
+          </span>
+          {isVariable && (
+            <div className="bg-primary p-1.5 rounded-full shadow-xl">
+              <Info className="w-3 h-3 text-white" />
+            </div>
+          )}
+        </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/40" />
-        
-        {/* Category badge */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: delay + 0.2 }}
-          className="absolute top-3 left-3 px-3 py-1 bg-orange-500/90 text-white text-xs font-semibold rounded-full"
-        >
-          {category}
-        </motion.div>
-        
-        {/* Price badge */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: delay + 0.3 }}
-          className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-gray-900 text-sm font-bold rounded-full"
-        >
-          {priceLabel}
-        </motion.div>
+        {/* Floating Price Tag */}
+        <div className="absolute bottom-4 right-4">
+          <div className="px-4 py-2 rounded-2xl bg-white text-black font-black text-lg shadow-2xl">
+            {isVariable && <span className="text-[10px] block leading-none opacity-50 uppercase">From</span>}
+            {formatPrice(displayPriceNum)}
+          </div>
+        </div>
       </div>
 
-      <div className="relative z-10 p-6">
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: delay + 0.4 }}
-          className="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors"
-        >
+      {/* Content */}
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-black italic uppercase tracking-tighter text-white group-hover:text-primary transition-colors duration-300">
           {name}
-        </motion.h3>
+        </h3>
         
         {description && (
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: delay + 0.5 }}
-            className="text-sm text-slate-300 line-clamp-3"
-          >
+          <p className="mt-2 text-gray-400 text-sm font-medium leading-relaxed line-clamp-2">
             {description}
-          </motion.p>
+          </p>
         )}
+
+        <div className="mt-auto pt-6 flex items-center justify-between">
+          <div className="flex gap-1">
+             <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
+             <div className="w-1.5 h-1.5 rounded-full bg-primary/20" />
+          </div>
+          
+          <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+            View <Plus className="w-3 h-3" />
+          </button>
+        </div>
       </div>
     </motion.div>
   );
