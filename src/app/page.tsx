@@ -97,11 +97,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. EVOLUTION TIMELINE */}
-      <section className="bg-zinc-950/50 py-32 border-y border-white/5">
-        <BrandStorytelling />
-      </section>
-
       {/* 5. CONTACT DOCK */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
