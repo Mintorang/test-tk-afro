@@ -25,7 +25,7 @@ export function HeaderDeliveryInfo() {
               <Truck className="w-4 h-4 text-orange-400" />
             </motion.div>
             <span className="text-slate-300">
-              <span className="font-semibold text-orange-400">UK Delivery</span> From £24.99
+              <span className="font-semibold text-orange-400">UK Delivery</span> From £30.00
             </span>
           </motion.div>
 
@@ -51,4 +51,5 @@ export function HeaderDeliveryInfo() {
       </div>
     </motion.div>
   );
+
 }
