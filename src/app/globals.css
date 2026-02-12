@@ -30,9 +30,9 @@
     @apply font-black tracking-tighter italic uppercase text-white;
   }
 
-  /* CUSTOM SCROLL MARGIN: Prevents header from blocking content when jumping to sections */
+  /* HEADER BLOCK FIX: Ensures anchored sections stop below the sticky header */
   section, [id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px; /* Increased to account for both banner + header */
   }
 }
 
@@ -54,12 +54,18 @@
 
   /* FROZEN SECTION UI FIX: Spacing between Title and Price */
   .product-header-row {
-    @apply flex justify-between items-start gap-6 mb-2;
+    @apply flex justify-between items-start gap-6 mb-2 w-full;
+  }
+
+  /* CART OVERLAP FIX: Forces the cart content to start below the navigation header */
+  .cart-container, [class*="cart-drawer"] {
+    padding-top: 90px !important;
+    z-index: 50;
   }
 }
 
 @layer utilities {
-  /* MANUAL SCROLLBAR HIDE: Defines the class so @apply works without the plugin */
+  /* MANUAL SCROLLBAR HIDE: Fixes Vercel build error without terminal install */
   .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;     /* Firefox */
@@ -72,6 +78,12 @@
 
 html {
   scroll-behavior: smooth;
-  /* This now works because it is defined in @layer utilities above */
   @apply scrollbar-hide;
+}
+
+/* Ensure header transparency/blur works with the dark theme */
+header {
+  backdrop-filter: blur(12px);
+  background: rgba(8, 8, 8, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
