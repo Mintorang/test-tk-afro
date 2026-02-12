@@ -81,7 +81,7 @@ export function ScrollAwareDeliveryBanner() {
             </motion.div>
             <div>
               <p className="font-bold text-lg text-black">UK Delivery</p>
-              <p className="text-sm font-medium text-black">From £24.99 • Free Collection</p>
+              <p className="text-sm font-medium text-black">At £30.00 • Free Collection</p>
             </div>
           </div>
         </motion.div>
@@ -115,4 +115,5 @@ export function ScrollAwareDeliveryBanner() {
       </motion.div>
     </motion.div>
   );
+
 }
