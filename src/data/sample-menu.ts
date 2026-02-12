@@ -204,7 +204,7 @@ export const featuredDishes: MenuItem[] = [
     id: "peppered-grilled-soft-chicken",
     name: "Peppered Grilled Soft Chicken",
     description: "Grilled soft chicken in pepper sauce",
-    imageUrl: "/images/dishes/softchicken.jpg",
+    imageUrl: "/images/dishes/gpsoftchicken.jpg",
     category: "Protein Dishes",
     sizeOptions: [
       { size: "2L", price: 55.00, portionInfo: "2 Litres" },
@@ -397,7 +397,7 @@ export const featuredDishes: MenuItem[] = [
     id: "dodo-gizzards",
     name: "Dodo Gizzards",
     description: "Fried plantain with gizzards",
-    imageUrl: "/images/dishes/dodo.png",
+    imageUrl: "/images/dishes/dodogizz.jpg",
     category: "Side Dishes",
     sizeOptions: [
       { size: "2L", price: 60.00, portionInfo: "2 Litres" },
@@ -550,7 +550,7 @@ export const featuredDishes: MenuItem[] = [
     id: "tray-puff-puff",
     name: "Tray Puff Puff",
     description: "Tray of puff puff",
-    imageUrl: "/images/dishes/puff-puff-meat-pie.jpeg",
+    imageUrl: "/images/dishes/puffpuff.jpg",
     category: "Snacks & Pastries",
     sizeOptions: [
       { size: "tray", price: 45.00, portionInfo: "Tray" }
