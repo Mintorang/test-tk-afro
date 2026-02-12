@@ -66,37 +66,25 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-orange-500/30`}>
         <CartProvider>
-          {/* 1. Floating Delivery Banner (Top) */}
-          <div className="fixed top-0 inset-x-0 z-[60]">
+          {/* Header Section: Now fills top of page without gaps */}
+          <div className="relative z-[100] w-full flex flex-col">
              <DeliveryBanner />
+             <Header /> 
           </div>
 
-          {/* 2. Floating Glass Header */}
-          <div className="fixed top-12 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-            <div className="glass w-full max-w-6xl h-16 rounded-full flex items-center justify-between px-2 pointer-events-auto shadow-2xl shadow-black/50">
-               <Header />
-            </div>
-          </div>
-
-          {/* 3. Main Content Area */}
-          <main className="min-h-screen pt-32 pb-24 md:pb-12">
+          {/* Main Content: Removed the large pt-32 padding so it flows naturally after the header */}
+          <main className="min-h-screen relative overflow-x-hidden">
             {children}
           </main>
 
-          {/* 4. Footer & Attribution */}
           <Footer />
-          <div className="pb-24 md:pb-0">
-            <WebDesignAttribution variant="floating" />
+
+          {/* Blow up the attribution bit and move it out of floating mode */}
+          <div className="py-8 bg-zinc-950 flex justify-center border-t border-white/5">
+            <WebDesignAttribution variant="expanded" className="scale-110" />
           </div>
 
-          {/* 5. Mobile Navigation (The "App Dock") */}
-          <div className="fixed bottom-6 inset-x-0 z-50 flex justify-center px-6 md:hidden">
-            <div className="glass w-full h-16 rounded-[2rem] shadow-2xl shadow-orange-500/10">
-               <MobileNav />
-            </div>
-          </div>
-
-          {/* 6. Modals */}
+          <MobileNav />
           <CartModal />
         </CartProvider>
       </body>
