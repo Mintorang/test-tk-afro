@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, Clock, Truck, ChevronRight } from 'lucide-react';
+import { Star, Clock, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
 
 const heroImages = [
   {
@@ -37,7 +37,7 @@ const heroImages = [
 const features = [
   { icon: Star, title: 'Premium Quality', description: 'Authentic Nigerian recipes' },
   { icon: Clock, title: 'Fresh Daily', description: 'Prepared fresh every day' },
-  { icon: Truck, title: 'UK-Wide Delivery', description: 'Fast delivery across UK' }
+  { icon: Truck, title: 'UK-Wide Delivery', description: 'Nationwide shipping' }
 ];
 
 export function EnhancedHero() {
@@ -53,7 +53,7 @@ export function EnhancedHero() {
   }, []);
 
   const y = useTransform(scrollY, [0, 500], [0, 100]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,15 +63,16 @@ export function EnhancedHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#080808]">
+      {/* Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImageIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.35, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute inset-0"
           >
             <Image
@@ -82,60 +83,92 @@ export function EnhancedHero() {
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-[#0a0a0a]" />
+            {/* High-end Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-[#080808]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
           </motion.div>
         </AnimatePresence>
       </div>
 
+      {/* Main Content */}
       <motion.div 
         style={{ y: isMobile ? 0 : y, opacity }}
-        className="relative z-10 container mx-auto px-6 pt-20 pb-12 text-center"
+        className="relative z-10 container mx-auto px-6 pt-32 pb-12 text-center"
       >
+        {/* Trust Badge - Improves "First Impression" Reliability */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 backdrop-blur-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl"
         >
-          <span className="text-orange-400 text-sm font-bold tracking-widest uppercase">
-            {heroImages[currentImageIndex].title}
+          <ShieldCheck className="w-4 h-4 text-green-500" />
+          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/80">
+            5-Star Hygiene Rated Kitchen
           </span>
         </motion.div>
 
-        <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-6 leading-[1.1] tracking-tighter">
-          <span className="text-white">TK AFRO</span><br/>
-          <span className="bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent">KITCHEN</span>
-        </h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black mb-8 leading-[0.9] tracking-tighter italic uppercase">
+            <span className="text-white">TK AFRO</span><br/>
+            <span className="text-gradient">KITCHEN</span>
+          </h1>
+        </motion.div>
 
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Experience authentic Nigerian cuisine with premium ingredients, 
-          traditional recipes, and exceptional taste.
-        </p>
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
+        >
+          Experience the soul of Nigerian cuisine. Authentic spices, 
+          premium ingredients, and traditional flavors delivered to your door.
+        </motion.p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Buttons using your Global Classes */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+        >
           <Link href="/menu" className="w-full sm:w-auto">
-            <button className="w-full sm:px-12 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-[0_0_20px_rgba(249,115,22,0.3)]">
-              Order Now
+            <button className="button-primary w-full sm:min-w-[220px] flex items-center justify-center gap-2">
+              Order Now <ArrowRight className="w-4 h-4" />
             </button>
           </Link>
-          <Link href="/contact" className="w-full sm:w-auto">
-            <button className="w-full px-12 py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-colors text-white font-medium">
-              View Menu
+          <Link href="/frozen" className="w-full sm:w-auto">
+            <button className="button-glass w-full sm:min-w-[220px]">
+              Frozen Range
             </button>
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="hidden md:grid grid-cols-3 gap-8 mt-20">
+        {/* Bento-styled Features */}
+        <div className="hidden md:grid grid-cols-3 gap-6 mt-24 max-w-4xl mx-auto">
           {features.map((f, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="bg-orange-500/20 p-3 rounded-full mb-3">
-                <f.icon className="text-orange-500 w-6 h-6" />
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + (i * 0.1) }}
+              className="glass p-6 rounded-[1.5rem] border border-white/5 hover:border-primary/20 transition-colors group"
+            >
+              <div className="bg-primary/10 w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <f.icon className="text-primary w-6 h-6" />
               </div>
-              <span className="text-white font-bold">{f.title}</span>
-              <span className="text-gray-500 text-xs">{f.description}</span>
-            </div>
+              <h3 className="text-sm font-black italic uppercase text-white mb-1">{f.title}</h3>
+              <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider">{f.description}</p>
+            </motion.div>
           ))}
         </div>
       </motion.div>
+      
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080808] to-transparent z-20" />
     </section>
   );
 }
