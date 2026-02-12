@@ -173,13 +173,18 @@ export function InteractiveMenuExperience() {
                           className="flex-1 h-12 rounded-full bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20"
                           onClick={() => {
                             addToCart({
-                                id: typeof dish.id === 'string' ? dish.id : dish.id.toString(),
-                                name: dish.name,
-                                price: parseFloat(dish.price),
-                                image: dish.image,
-                                quantity: 1
-                            });
-                          }}
+                              id: typeof dish.id === 'string' ? dish.id : dish.id.toString(),
+                              name: dish.name,
+                              price: parseFloat(dish.price),
+                              quantity: 1,
+                                // Add these missing fields to satisfy the 'CartItem' type:
+                              imageUrl: dish.image || '', // Maps your 'image' field to the required 'imageUrl'
+                              description: dish.description || '',
+                              category: dish.category || 'general',
+                              portionInfo: '',
+                            selectedSize: 'Standard'
+                          });
+                        }}
                         >
                           <ShoppingCart className="w-3 h-3" /> Add
                         </button>
