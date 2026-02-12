@@ -34,6 +34,15 @@
   p {
     @apply text-slate-400 leading-relaxed font-medium;
   }
+
+  /* REMOVE ARTIFACTS: Yellow line and grey circles [Source: User Instructions] */
+  .yellow-line, .scroll-line, [class*="yellow-line"] {
+    @apply hidden opacity-0 pointer-events-none;
+  }
+
+  .grey-circle, .bg-circle-blob, [class*="bg-zinc-800/50"] {
+    @apply hidden opacity-0;
+  }
 }
 
 @layer components {
@@ -64,9 +73,19 @@
            hover:bg-white/10 transition-all;
   }
 
-  /* Mobile App Navigation Fixes */
+  /* NAVIGATION LINKS: Line appears under when hovered [Source: User Instructions] */
   .nav-link {
-    @apply text-gray-400 hover:text-white transition-all text-[11px] font-bold tracking-widest uppercase;
+    @apply relative text-gray-400 hover:text-white transition-all text-[11px] font-bold tracking-widest uppercase;
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
   }
 
   /* Safari & Mobile Tap Target Fixes */
@@ -98,7 +117,7 @@
   50% { transform: translateY(-15px); }
 }
 
-/* Paypal Container Logic (Kept from your original) */
+/* Paypal Container Logic */
 .paypal-button-container {
   @apply min-h-[150px] flex justify-center items-center w-full max-w-[500px] mx-auto;
 }
