@@ -8,7 +8,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { CartModal } from "@/components/cart/CartModal";
 import { DeliveryBanner } from "@/components/ui/DeliveryBanner";
 import { WebDesignAttribution } from "@/components/ui/WebDesignAttribution";
-import { PromoBanner } from "@/components/layout/PromoBanner"
+import { PromoBanner } from "@/components/layout/promobanner"
 
 const inter = Inter({ subsets: ["latin"] });
 
