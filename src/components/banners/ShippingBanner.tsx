@@ -29,7 +29,7 @@ export function ShippingBanner() {
               Nationwide Delivery
             </span>
             <span className="text-slate-300 ml-2">
-              • From £24.99 (varies by region)
+              • At £30.00
             </span>
           </p>
         </div>
