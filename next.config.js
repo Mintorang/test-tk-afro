@@ -17,6 +17,7 @@ const nextConfig = {
   // Optimize for Vercel builds
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-dialog', '@radix-ui/react-slot'],
+    turbopack: {},
   },
   
   // Faster builds
@@ -113,3 +114,4 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
