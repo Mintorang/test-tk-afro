@@ -17,6 +17,7 @@ export interface CartItem {
     portionInfo: string;
   };
   spiceLevel?: string;
+  image?: string
 }
 
 interface CartContextType {
@@ -178,5 +179,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     </CartContext.Provider>
   );
 }
+
 
 export const useCart = () => useContext(CartContext); 
