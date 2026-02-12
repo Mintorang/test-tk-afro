@@ -1,67 +1,61 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef, ReactNode } from 'react';
+import { useRef } from 'react';
 
 interface ScrollAnimationProps {
-  children: ReactNode;
-  className?: string;
+  children: React.ReactNode;
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
-  duration?: number;
+  className?: string;
 }
 
 export function ScrollAnimation({ 
   children, 
-  className = '', 
-  delay = 0,
+  delay = 0, 
   direction = 'up',
-  duration = 0.6 
+  className = "" 
 }: ScrollAnimationProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  
+  /**
+   * amount: 0.01 triggers as soon as 1% of the element is visible (instant).
+   * margin: "-5px" prevents it from flickering at the very edge.
+   */
+  const isInView = useInView(ref, { 
+    once: true, 
+    amount: 0.01 
+  });
 
-  const getInitialPosition = () => {
-    switch (direction) {
-      case 'up':
-        return { y: 50, opacity: 0 };
-      case 'down':
-        return { y: -50, opacity: 0 };
-      case 'left':
-        return { x: 50, opacity: 0 };
-      case 'right':
-        return { x: -50, opacity: 0 };
-      default:
-        return { y: 50, opacity: 0 };
-    }
-  };
-
-  const getAnimatePosition = () => {
-    switch (direction) {
-      case 'up':
-      case 'down':
-        return { y: 0, opacity: 1 };
-      case 'left':
-      case 'right':
-        return { x: 0, opacity: 1 };
-      default:
-        return { y: 0, opacity: 1 };
-    }
+  const directions = {
+    up: { y: 12 },    // Minimal movement = perceived faster speed
+    down: { y: -12 },
+    left: { x: 12 },
+    right: { x: -12 },
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ 
-        duration, 
-        delay,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <div ref={ref} className={className}>
+      <motion.div
+        initial={{ 
+          opacity: 0, 
+          ...directions[direction] 
+        }}
+        animate={isInView ? { 
+          opacity: 1, 
+          x: 0, 
+          y: 0 
+        } : {}}
+        transition={{
+          // 0.3s is the sweet spot for boutique responsiveness
+          duration: 0.3,
+          delay: delay,
+          // Custom Bezier for that "Luxury Pop" feel
+          ease: [0.16, 1, 0.3, 1], 
+        }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
-} 
+}
