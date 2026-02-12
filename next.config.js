@@ -13,11 +13,10 @@ const nextConfig = {
   // Don't use export mode on Vercel to keep API routes working
   // Only use export for truly static deployments
   output: process.env.VERCEL ? undefined : (process.env.STATIC_EXPORT === 'true' ? 'export' : undefined),
-  
+  turbopack: {},
   // Optimize for Vercel builds
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-dialog', '@radix-ui/react-slot'],
-    turbopack: {},
   },
   
   // Faster builds
@@ -114,4 +113,5 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
 
