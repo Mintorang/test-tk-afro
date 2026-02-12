@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Utensils, Snowflake, Users, ShoppingCart } from 'lucide-react';
@@ -22,92 +22,87 @@ export function MobileNav() {
     <motion.nav
       initial={{ y: 100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+      className="fixed bottom-6 left-4 right-4 z-50 md:hidden"
     >
-      {/* Background with glassmorphism */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-md border-t border-white/10" />
+      {/* Floating Glass Container */}
+      <div className="relative glass rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden">
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-xl" />
         
-        <div className="relative flex items-center justify-around px-2 py-3">
+        <div className="relative flex items-center justify-around px-2 py-4">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
             
             return (
-              <Link key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href} className="relative group">
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="flex flex-col items-center space-y-1"
+                  className="flex flex-col items-center gap-1.5"
                 >
-                  <motion.div
-                    className={`
-                      relative p-2.5 rounded-xl transition-all duration-300
-                      ${isActive 
-                        ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white' 
-                        : 'text-gray-400 hover:text-white'
-                      }
-                    `}
-                    animate={{
-                      scale: isActive ? 1.1 : 1,
-                    }}
-                  >
-                    <Icon size={18} />
+                  <div className="relative p-1">
+                    <Icon 
+                      size={20} 
+                      className={`transition-all duration-300 ${isActive ? 'text-primary' : 'text-gray-500'}`} 
+                    />
                     
-                    {/* Active indicator */}
+                    {/* Active Underglow Glow */}
                     {isActive && (
                       <motion.div
-                        layoutId="activeTab"
-                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500 to-yellow-500"
-                        initial={false}
-                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                        layoutId="navUnderglow"
+                        className="absolute inset-0 bg-primary/20 blur-md rounded-full -z-10"
+                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
                     )}
-                  </motion.div>
+                  </div>
                   
                   <span className={`
-                    text-xs font-medium transition-colors text-center
-                    ${isActive ? 'text-orange-400' : 'text-gray-400'}
+                    text-[9px] font-black uppercase italic tracking-tighter transition-colors
+                    ${isActive ? 'text-white' : 'text-gray-500'}
                   `}>
                     {item.label}
                   </span>
+
+                  {/* High-End Active Pill */}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activePill"
+                      className="absolute -bottom-1 w-4 h-[2px] bg-primary rounded-full shadow-[0_0_8px_#f97316]"
+                      transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                    />
+                  )}
                 </motion.div>
               </Link>
             );
           })}
           
-          {/* Cart button */}
+          {/* Boutique Cart Button */}
           <motion.div
-            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center space-y-1"
+            className="flex flex-col items-center gap-1.5"
             onClick={() => setIsCartOpen(true)}
           >
-            <motion.div
-              className="relative p-2.5 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white"
-              whileHover={{ 
-                boxShadow: "0 0 20px rgba(34, 197, 94, 0.5)" 
-              }}
-            >
-              <ShoppingCart size={18} />
+            <div className="relative p-1">
+              <div className={`
+                p-2 rounded-xl bg-white/5 border border-white/10 transition-all
+                ${cartItemCount > 0 ? 'text-primary border-primary/30' : 'text-gray-500'}
+              `}>
+                <ShoppingCart size={18} />
+              </div>
               
-              {/* Cart badge - only show if there are items */}
               {cartItemCount > 0 && (
                 <motion.div
-                  className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center"
+                  className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center border-2 border-black"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ delay: 0.2 }}
                 >
-                  <span className="text-xs font-bold text-white">
-                    {cartItemCount > 99 ? '99+' : cartItemCount}
+                  <span className="text-[8px] font-black text-white">
+                    {cartItemCount}
                   </span>
                 </motion.div>
               )}
-            </motion.div>
-            
-            <span className="text-xs font-medium text-green-400">
+            </div>
+            <span className="text-[9px] font-black uppercase italic tracking-tighter text-gray-500">
               Cart
             </span>
           </motion.div>
@@ -115,4 +110,4 @@ export function MobileNav() {
       </div>
     </motion.nav>
   );
-} 
+}
