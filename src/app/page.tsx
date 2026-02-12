@@ -103,27 +103,7 @@ export default function HomePage() {
         <div className="mt-24 pt-12"> {/* Added padding to prevent header overlap during scroll */}
            <InteractiveMenuExperience />
         </div>
-      </section>
-
-
-      {/* 5. CONTACT DOCK */}
-      <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { icon: Mail, label: "Email Us", val: "chef@tkafrokitchen.com", link: "mailto:chef@tkafrokitchen.com" },
-            { icon: Clock, label: "Opening Hours", val: "Mon - Sun: 9AM - 10PM", link: "#" },
-            { icon: MapPin, label: "Location", val: "Milton Keynes, UK", link: "https://maps.google.com" }
-          ].map((item, idx) => (
-            <a href={item.link} key={idx} className="glass-card p-10 flex flex-col items-center text-center group rounded-[2.5rem]">
-              <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-all">
-                <item.icon className="w-6 h-6 text-primary group-hover:text-white" />
-              </div>
-              <h4 className="text-[10px] font-black tracking-[0.3em] text-gray-500 uppercase mb-3">{item.label}</h4>
-              <p className="text-white text-lg font-bold">{item.val}</p>
-            </a>
-          ))}
-        </div>
-      </section>
+      
     </div>
   );
 }
