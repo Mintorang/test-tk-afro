@@ -15,7 +15,7 @@
   --muted-foreground: #94a3b8;
   --accent: #fbbf24;
   --border: rgba(255, 255, 255, 0.08);
-  --radius: 1.5rem;         /* Modern rounded look */
+  --radius: 1.5rem;         
 }
 
 @layer base {
@@ -35,7 +35,7 @@
     @apply text-slate-400 leading-relaxed font-medium;
   }
 
-  /* REMOVE ARTIFACTS: Yellow line and grey circles [Source: User Instructions] */
+  /* REMOVE ARTIFACTS: Yellow line and grey circles */
   .yellow-line, .scroll-line, [class*="yellow-line"] {
     @apply hidden opacity-0 pointer-events-none;
   }
@@ -46,8 +46,6 @@
 }
 
 @layer components {
-  /* The "Massive Change" UI Elements */
-  
   .glass {
     @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] shadow-2xl;
   }
@@ -57,35 +55,32 @@
            border border-white/[0.08] transition-all duration-500 hover:border-orange-500/40 hover:-translate-y-2;
   }
 
-  /* Bento Grid Layout Utility */
-  .bento-grid {
-    @apply grid grid-cols-1 md:grid-cols-6 gap-4 p-4 max-w-7xl mx-auto;
-  }
-
-  /* Modernized Buttons */
-  .button-primary {
-    @apply bg-primary text-white px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest
-           transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20;
-  }
-
-  .button-glass {
-    @apply glass text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest
-           hover:bg-white/10 transition-all;
-  }
-
-  /* NAVIGATION LINKS: Line appears under when hovered [Source: User Instructions] */
+  /* NAVIGATION LINKS: Luxury Underglow Effect */
   .nav-link {
-    @apply relative text-gray-400 hover:text-white transition-all text-[11px] font-bold tracking-widest uppercase;
+    @apply relative text-gray-400 transition-all duration-300 text-[11px] font-black tracking-[0.2em] uppercase;
     text-decoration: none;
+  }
+
+  .nav-link:hover {
+    @apply text-white;
+    /* This creates the text glow itself */
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 ease-out;
+    @apply absolute -bottom-2 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 ease-out;
+    /* This creates the "Underglow" pool of light */
+    box-shadow: 0 0 20px 2px rgba(249, 115, 22, 0.6);
   }
 
   .nav-link:hover::after {
     @apply w-full;
+  }
+
+  /* Mobile App Navigation Fixes */
+  .mobile-nav-link {
+    @apply flex flex-col items-center gap-1 text-gray-500 hover:text-primary transition-colors duration-300;
   }
 
   /* Safari & Mobile Tap Target Fixes */
@@ -111,24 +106,20 @@
   }
 }
 
-/* Custom Keyframes */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
 }
 
-/* Paypal Container Logic */
 .paypal-button-container {
   @apply min-h-[150px] flex justify-center items-center w-full max-w-[500px] mx-auto;
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
   @apply scrollbar-hide;
 }
 
-/* Custom Selection Color */
 ::selection {
   @apply bg-orange-500/30 text-white;
 }
