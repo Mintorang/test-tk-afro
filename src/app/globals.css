@@ -2,124 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 2026 High-End E-commerce Variables */
 :root {
-  --background: #080808;      /* Deepest Black */
+  --background: #080808;
   --foreground: #ffffff;
-  --card: #121212;          /* Soft Black */
-  --card-foreground: #f8f9fa;
-  --primary: #f97316;       /* TK Afro Orange */
-  --primary-foreground: #ffffff;
-  --secondary: #1a1a1a;
-  --muted: #64748b;
-  --muted-foreground: #94a3b8;
-  --accent: #fbbf24;
+  --card: #121212;
+  --primary: #f97316;
   --border: rgba(255, 255, 255, 0.08);
-  --radius: 1.5rem;         
+  --radius: 1.5rem;
 }
 
 @layer base {
   body {
-    @apply bg-[color:var(--background)] text-[color:var(--foreground)] antialiased transition-colors duration-500;
+    @apply bg-[color:var(--background)] text-[color:var(--foreground)] antialiased;
   }
   
-  * {
-    @apply border-border;
+  /* CRITICAL FIX: Hide the yellow/orange line and grey artifacts */
+  .yellow-line, 
+  .scroll-line, 
+  [class*="border-primary/30"],
+  [class*="ring-primary/20"],
+  .bg-circle-blob {
+    display: none !important;
+    opacity: 0 !important;
   }
 
   h1, h2, h3 {
     @apply font-black tracking-tighter italic uppercase text-white;
   }
-
-  p {
-    @apply text-slate-400 leading-relaxed font-medium;
-  }
-
-  /* REMOVE ARTIFACTS: Yellow line and grey circles */
-  .yellow-line, .scroll-line, [class*="yellow-line"] {
-    @apply hidden opacity-0 pointer-events-none;
-  }
-
-  .grey-circle, .bg-circle-blob, [class*="bg-zinc-800/50"] {
-    @apply hidden opacity-0;
-  }
 }
 
 @layer components {
-  .glass {
-    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] shadow-2xl;
-  }
-
   .glass-card {
-    @apply relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white/[0.05] to-transparent 
-           border border-white/[0.08] transition-all duration-500 hover:border-orange-500/40 hover:-translate-y-2;
+    @apply relative overflow-hidden bg-gradient-to-br from-white/[0.03] to-transparent 
+           border border-white/5 transition-all duration-700 
+           hover:border-white/20 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)];
   }
 
-  /* NAVIGATION LINKS: Luxury Underglow Effect */
   .nav-link {
-    @apply relative text-gray-400 transition-all duration-300 text-[11px] font-black tracking-[0.2em] uppercase;
-    text-decoration: none;
+    @apply relative text-gray-500 transition-all duration-300 text-[10px] font-black tracking-[0.2em] uppercase;
   }
 
   .nav-link:hover {
     @apply text-white;
-    /* This creates the text glow itself */
-    text-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
   }
-
-  .nav-link::after {
-    content: '';
-    @apply absolute -bottom-2 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 ease-out;
-    /* This creates the "Underglow" pool of light */
-    box-shadow: 0 0 20px 2px rgba(249, 115, 22, 0.6);
-  }
-
-  .nav-link:hover::after {
-    @apply w-full;
-  }
-
-  /* Mobile App Navigation Fixes */
-  .mobile-nav-link {
-    @apply flex flex-col items-center gap-1 text-gray-500 hover:text-primary transition-colors duration-300;
-  }
-
-  /* Safari & Mobile Tap Target Fixes */
-  @supports (-webkit-touch-callout: none) {
-    .nav-link, button, a {
-      -webkit-tap-highlight-color: transparent;
-      @apply cursor-pointer;
-    }
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-.paypal-button-container {
-  @apply min-h-[150px] flex justify-center items-center w-full max-w-[500px] mx-auto;
 }
 
 html {
   scroll-behavior: smooth;
   @apply scrollbar-hide;
-}
-
-::selection {
-  @apply bg-orange-500/30 text-white;
 }
