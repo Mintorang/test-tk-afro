@@ -50,7 +50,7 @@ export function CollapsibleDeliveryBanner() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 text-sm">Nationwide Delivery</h3>
-                  <p className="text-xs text-gray-600">Any UK postcode - From £24.99</p>
+                  <p className="text-xs text-gray-600">Any UK postcode - At £30.00</p>
                 </div>
               </div>
 
@@ -80,4 +80,5 @@ export function CollapsibleDeliveryBanner() {
       </AnimatePresence>
     </motion.div>
   );
+
 }
