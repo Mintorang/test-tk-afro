@@ -2,41 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 2026 High-End E-commerce Variables */
 :root {
-  --background: 10 10 10; /* Near black */
-  --foreground: 255 255 255;
-  --primary: 249 115 22; /* Afro Orange */
+  --background: #080808;      /* Deepest Black */
+  --foreground: #ffffff;
+  --card: #121212;          /* Soft Black */
+  --card-foreground: #f8f9fa;
+  --primary: #f97316;       /* TK Afro Orange */
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a1a;
+  --muted: #64748b;
+  --muted-foreground: #94a3b8;
+  --accent: #fbbf24;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 1.5rem;         /* Modern rounded look */
 }
 
-body {
-  background-color: rgb(var(--background));
-  color: rgb(var(--foreground));
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  body {
+    @apply bg-[color:var(--background)] text-[color:var(--foreground)] antialiased transition-colors duration-500;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  h1, h2, h3 {
+    @apply font-black tracking-tighter italic uppercase text-white;
+  }
+
+  p {
+    @apply text-slate-400 leading-relaxed font-medium;
+  }
 }
 
-/* Glass UI Elements */
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+@layer components {
+  /* The "Massive Change" UI Elements */
+  
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] shadow-2xl;
+  }
+
+  .glass-card {
+    @apply relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white/[0.05] to-transparent 
+           border border-white/[0.08] transition-all duration-500 hover:border-orange-500/40 hover:-translate-y-2;
+  }
+
+  /* Bento Grid Layout Utility */
+  .bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-6 gap-4 p-4 max-w-7xl mx-auto;
+  }
+
+  /* Modernized Buttons */
+  .button-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest
+           transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20;
+  }
+
+  .button-glass {
+    @apply glass text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest
+           hover:bg-white/10 transition-all;
+  }
+
+  /* Mobile App Navigation Fixes */
+  .nav-link {
+    @apply text-gray-400 hover:text-white transition-all text-[11px] font-bold tracking-widest uppercase;
+  }
+
+  /* Safari & Mobile Tap Target Fixes */
+  @supports (-webkit-touch-callout: none) {
+    .nav-link, button, a {
+      -webkit-tap-highlight-color: transparent;
+      @apply cursor-pointer;
+    }
+  }
 }
 
-.glass-card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.glass-card:hover {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  transform: translateY(-4px);
+/* Custom Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-/* Hide scrollbar for ultra-clean mobile look */
-::-webkit-scrollbar {
-  display: none;
+/* Paypal Container Logic (Kept from your original) */
+.paypal-button-container {
+  @apply min-h-[150px] flex justify-center items-center w-full max-w-[500px] mx-auto;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  @apply scrollbar-hide;
+}
+
+/* Custom Selection Color */
+::selection {
+  @apply bg-orange-500/30 text-white;
 }
