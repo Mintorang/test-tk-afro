@@ -17,7 +17,7 @@ export function DeliveryBanner() {
             <Truck className="w-6 h-6 text-black animate-bounce" />
             <div>
               <p className="font-bold text-lg text-black">UK-Wide Delivery</p>
-              <p className="text-sm font-medium text-black">From £24.99</p>
+              <p className="text-sm font-medium text-black">From £30.00</p>
             </div>
           </div>
         </div>
