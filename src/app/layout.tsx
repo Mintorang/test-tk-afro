@@ -8,6 +8,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { CartModal } from "@/components/cart/CartModal";
 import { DeliveryBanner } from "@/components/ui/DeliveryBanner";
 import { WebDesignAttribution } from "@/components/ui/WebDesignAttribution";
+import { PromoBanner } from "@/components/layout/PromoBanner"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +58,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,25 +69,23 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-orange-500/30`}>
         <CartProvider>
-          {/* IMPROVEMENT: 
-              The header is now sticky to the top and spans the FULL width.
-              The 'z-[100]' ensures it stays above all other content.
-          */}
+          {/* STICKY CONTAINER */}
           <div className="sticky top-0 z-[100] w-full bg-background">
+             {/* 1. Promo Banner is now the first thing they see */}
+             <PromoBanner /> 
+             
+             {/* 2. Existing banners follow below it */}
              <DeliveryBanner />
              <Header /> 
           </div>
 
-          {/* The main content area no longer has artificial top padding,
-              allowing the first section (Hero) to tuck right under the header.
-          */}
           <main className="min-h-screen relative overflow-x-hidden">
             {children}
           </main>
 
           <Footer />
 
-          {/* Enlarged attribution bit as requested */}
+          {/* Attribution */}
           <div className="py-12 bg-zinc-950 flex justify-center border-t border-white/5">
             <WebDesignAttribution variant="expanded" className="scale-125 transition-transform hover:scale-110" />
           </div>
